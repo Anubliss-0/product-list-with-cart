@@ -17,6 +17,7 @@ function Deserts() {
 
   return (
     <>
+    <h2>Deserts</h2>
       {data.deserts.map((foodItem) => (
         <ProductCard
           id={foodItem.id}
@@ -24,7 +25,7 @@ function Deserts() {
           cart={cart}
           setCart={setCart}
         />
-      ))};
+      ))}
     </>
   )
 }

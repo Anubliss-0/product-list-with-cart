@@ -17,6 +17,7 @@ function Starters() {
 
   return (
     <>
+    <h2>Starters</h2>
       {data.starters.map((foodItem) => (
         <ProductCard
           id={foodItem.id}
@@ -24,7 +25,7 @@ function Starters() {
           cart={cart}
           setCart={setCart}
         />
-      ))};
+      ))}
     </>
   )
 }
