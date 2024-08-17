@@ -1,14 +1,22 @@
-import data from '../../assets/data.json';
+import { flattenAndMapData } from "./CartUtils";
 
 type CartProps = {
     id: number;
     quantity: number;
 };
 
-const flattenedData = Object.values(data).flatMap(items => items);
-const dataMap = new Map(flattenedData.map(item => [item.id, item]));
+type CartComponentProps = {
+    cart: CartProps[];
+    setCart: React.Dispatch<React.SetStateAction<CartProps[]>>;
+};
 
-function Cart({ cart }: { cart: CartProps[] }) {
+const dataMap = flattenAndMapData();
+
+function Cart({ cart, setCart }: CartComponentProps) {
+    const removeFromCart = (id: number) => {
+        setCart(cart.filter(item => item.id !== id));
+    };
+
     return (
         <div>
             {cart.map((item) => {
@@ -17,6 +25,7 @@ function Cart({ cart }: { cart: CartProps[] }) {
                     <div key={item.id}>
                         <p>Item Name: {product?.name}</p>
                         <p>Quantity: {item.quantity}</p>
+                        <button onClick={() => removeFromCart(item.id)}>X</button>
                     </div>
                 );
             })}

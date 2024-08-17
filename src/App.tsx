@@ -13,7 +13,10 @@ return (
         <Link to={`deserts`}>Deserts</Link>
       </nav>
       <Outlet context={{ cart, setCart }} />
-      <Cart cart={cart}/>
+      <Cart 
+        cart={cart}
+        setCart={setCart}
+      />
     </>
   )
 }
