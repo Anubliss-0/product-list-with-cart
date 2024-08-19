@@ -1,3 +1,5 @@
+import { useCart } from "../../App";
+
 type CartProps = {
     id: number;
     quantity: number;
@@ -6,42 +8,34 @@ type CartProps = {
 type ProductCardParams = {
     id: number;
     itemName: string;
-    cart: CartProps[];
-    setCart: React.Dispatch<React.SetStateAction<CartProps[]>>;
 }
 
-function ProductCard({ id, itemName, cart, setCart }: ProductCardParams) {
+function ProductCard({ id, itemName }: ProductCardParams) {
+    const { cart, setCart } = useCart()
     const itemInCart = cart.find(item => item.id === id);
     const quantity = itemInCart ? itemInCart.quantity : 0;
 
-    const updateCart = (cart: CartProps[], itemId: number, delta: number) => {
-        const itemInCart = cart.find(item => item.id === itemId);
-
-        if (itemInCart) {
-            const newQuantity = itemInCart.quantity + delta;
-            if (newQuantity > 0) {
-                return cart.map(item =>
-                    item.id === itemId
-                        ? { ...item, quantity: newQuantity }
-                        : item
-                );
+    const updateCart = (cart: CartProps[], itemId: number, delta: number): CartProps[] => {
+        return cart.reduce((updatedCart, item) => {
+            if (item.id === itemId) {
+                const newQuantity = item.quantity + delta;
+                if (newQuantity > 0) {
+                    updatedCart.push({ ...item, quantity: newQuantity });
+                }
             } else {
-                return cart.filter(item => item.id !== itemId);
+                updatedCart.push(item);
             }
-        } else if (delta > 0) {
-            return [...cart, { id: itemId, quantity: delta }];
-        } else {
-            return cart;
-        }
+            return updatedCart;
+        }, [] as CartProps[]).concat(
+            !cart.some(item => item.id === itemId) && delta > 0
+                ? [{ id: itemId, quantity: delta }]
+                : []
+        );
     };
 
-    const addItemToCart = () => {
-        setCart(prevCart => updateCart(prevCart, id, 1));
-    };
+    const addItemToCart = () => setCart(prevCart => updateCart(prevCart, id, 1));
 
-    const removeItemFromCart = () => {
-        setCart(prevCart => updateCart(prevCart, id, -1));
-    };
+    const removeItemFromCart = () => setCart(prevCart => updateCart(prevCart, id, -1));
 
     return (
         <>
@@ -50,7 +44,9 @@ function ProductCard({ id, itemName, cart, setCart }: ProductCardParams) {
             <button onClick={removeItemFromCart} disabled={quantity === 0}>
                 -
             </button>
-            <button onClick={addItemToCart}>+</button>
+            <button onClick={addItemToCart}>
+                +
+            </button>
         </>
     );
 }

@@ -1,7 +1,17 @@
 import { useState, createContext } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useOutletContext } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
 import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal";
+
+type CartProps = {
+  id: number;
+  quantity: number;
+};
+
+type CartContextType = {
+  cart: CartProps[];
+  setCart: React.Dispatch<React.SetStateAction<CartProps[]>>;
+};
 
 export const ConfirmationContext = createContext(false);
 
@@ -34,3 +44,7 @@ function App() {
 }
 
 export default App
+
+export function useCart() {
+  return useOutletContext<CartContextType>();
+}
