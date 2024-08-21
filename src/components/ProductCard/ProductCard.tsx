@@ -11,7 +11,7 @@ type ProductCardParams = {
 }
 
 function ProductCard({ id, itemName }: ProductCardParams) {
-    const { cart, setCart } = useCart()
+    const { cart, setCart } = useCart();
     const itemInCart = cart.find(item => item.id === id);
     const quantity = itemInCart ? itemInCart.quantity : 0;
 
@@ -38,16 +38,27 @@ function ProductCard({ id, itemName }: ProductCardParams) {
     const removeItemFromCart = () => setCart(prevCart => updateCart(prevCart, id, -1));
 
     return (
-        <>
+        <article>
             <p>{itemName}</p>
-            <p>{`Quantity: ${quantity}`}</p>
-            <button onClick={removeItemFromCart} disabled={quantity === 0}>
-                -
-            </button>
-            <button onClick={addItemToCart}>
-                +
-            </button>
-        </>
+            <div role="group">
+                {itemInCart ? (
+                    <>
+                        <span>{`Quantity: ${quantity}`}</span>
+                        <button onClick={removeItemFromCart} disabled={quantity === 0}>
+                            -
+                        </button>
+                        <button onClick={addItemToCart}>
+                            +
+                        </button>
+                    </>
+                )
+                    :
+                    (<>
+                        <button onClick={addItemToCart}>Add to cart</button>
+                    </>)
+                }
+            </div>
+        </article>
     );
 }
 
