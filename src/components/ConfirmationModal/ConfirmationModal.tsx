@@ -1,6 +1,7 @@
 type CartProps = {
     id: number;
     quantity: number;
+    price: number;
 };
 
 type ConfirmationModalProps = {

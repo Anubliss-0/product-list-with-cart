@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { flattenAndMapData } from "./CartUtils";
 
 type CartProps = {
@@ -14,29 +15,38 @@ type CartComponentProps = {
 const dataMap = flattenAndMapData();
 
 function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
+    const total = cart.reduce((sum, item) => {
+        const product = dataMap.get(item.id);
+        return sum + (product ? product.price * (item.quantity || 1) : 0);
+    }, 0);
+
     const removeFromCart = (id: number) => {
         setCart(cart.filter(item => item.id !== id));
     };
 
     const showConfirmation = () => {
         setShowConfirmation(true)
-    }
+    };
 
     return (
         <div>
+            <h3>Your cart</h3>
             {cart.map((item) => {
                 const product = dataMap.get(item.id);
                 return (
                     <>
                         <div key={item.id}>
-                            <p>Item Name: {product?.name}</p>
-                            <p>Quantity: {item.quantity}</p>
+                            <span>Item Name: {product?.name}</span>
+                            <span>Quantity: {item.quantity}</span>
+                            <span>Price: {product?.price}</span>
+                            <span>Total: {product?.price * item.quantity}</span>
                             <button onClick={() => removeFromCart(item.id)}>X</button>
                         </div>
                     </>
                 );
             })}
-            <button onClick={showConfirmation}>Confirm Order</button>
+            <h4>Total Amount: {total}</h4>
+            {cart.length > 0 && <button onClick={showConfirmation}>Confirm Order</button>}
         </div>
     );
 }

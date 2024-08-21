@@ -3,6 +3,7 @@ import data from '../../assets/data.json';
 type Product = {
     id: number;
     name: string;
+    price: number;
 };
 
 export const flattenAndMapData = (): Map<number, Product> => {

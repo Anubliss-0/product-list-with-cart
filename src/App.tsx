@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Outlet, Link, useOutletContext } from "react-router-dom";
+import styles from "./App.module.scss"
 import Cart from "./components/Cart/Cart";
 import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal";
 
@@ -18,28 +19,37 @@ function App() {
   const [showConfirmation, setShowConfirmation] = useState<boolean>(false);
 
   return (
-    <>
-      <header>
-        <h1>Order some fud</h1>
-        <nav>
-          <Link to={`starters`}>Starters</Link>
-          <Link to={`mains`}>Mains</Link>
-          <Link to={`deserts`}>Deserts</Link>
-        </nav>
-      </header>
-      <Outlet context={{ cart, setCart }} />
-      <Cart
-        cart={cart}
-        setCart={setCart}
-        setShowConfirmation={setShowConfirmation}
-      />
-      <ConfirmationModal
-        cart={cart}
-        setCart={setCart}
-        showConfirmation={showConfirmation}
-        setShowConfirmation={setShowConfirmation}
-      />
-    </>
+    <main className={styles.container}>
+      <div>
+        <header>
+          <nav>
+            <Link to={`starters`}>Starters</Link>
+            <Link to={`mains`}>Mains</Link>
+            <Link to={`deserts`}>Deserts</Link>
+          </nav>
+        </header>
+        <section>
+          <Outlet context={{ cart, setCart }} />
+        </section>
+      </div>
+      <div>
+        <section>
+          <Cart
+            cart={cart}
+            setCart={setCart}
+            setShowConfirmation={setShowConfirmation}
+          />
+        </section>
+        <section>
+          <ConfirmationModal
+            cart={cart}
+            setCart={setCart}
+            showConfirmation={showConfirmation}
+            setShowConfirmation={setShowConfirmation}
+          />
+        </section>
+      </div>
+    </main>
   )
 }
 

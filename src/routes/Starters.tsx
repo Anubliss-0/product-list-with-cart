@@ -1,17 +1,20 @@
 import ProductCard from '../components/ProductCard/ProductCard';
 import data from '../assets/data.json'
+import styles from "./ProductList.module.scss"
 
 function Starters() {
   return (
-    <section>
+    <>
       <h2>Starters</h2>
+      <div className={styles.itemList}>
         {data.starters.map((foodItem) => (
           <ProductCard
             id={foodItem.id}
             itemName={foodItem.name}
           />
         ))}
-    </section>
+      </div>
+    </>
   )
 }
 
