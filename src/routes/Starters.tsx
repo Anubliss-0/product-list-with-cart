@@ -5,13 +5,10 @@ import styles from "./ProductList.module.scss"
 function Starters() {
   return (
     <>
-      <h2>Starters</h2>
+      <h1>Starters</h1>
       <div className={styles.itemList}>
         {data.starters.map((foodItem) => (
-          <ProductCard
-            id={foodItem.id}
-            itemName={foodItem.name}
-          />
+          <ProductCard key={foodItem.id} foodItem={foodItem}/>
         ))}
       </div>
     </>

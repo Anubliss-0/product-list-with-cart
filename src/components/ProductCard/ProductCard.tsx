@@ -5,14 +5,25 @@ type CartProps = {
     quantity: number;
 };
 
-type ProductCardParams = {
-    id: number;
-    itemName: string;
-}
+type ProductCardProps = {
+    foodItem: {
+        id: number;
+        name: string;
+        image: {
+            thumbnail: string;
+            mobile: string;
+            tablet: string;
+            desktop: string;
+        };
+        category: string;
+        price: number;
+    };
+};
 
-function ProductCard({ id, itemName }: ProductCardParams) {
+
+function ProductCard({ foodItem }: ProductCardProps) {
     const { cart, setCart } = useCart();
-    const itemInCart = cart.find(item => item.id === id);
+    const itemInCart = cart.find(item => item.id === foodItem.id);
     const quantity = itemInCart ? itemInCart.quantity : 0;
 
     const updateCart = (cart: CartProps[], itemId: number, delta: number): CartProps[] => {
@@ -33,21 +44,21 @@ function ProductCard({ id, itemName }: ProductCardParams) {
         );
     };
 
-    const addItemToCart = () => setCart(prevCart => updateCart(prevCart, id, 1));
+    const addItemToCart = () => setCart(prevCart => updateCart(prevCart, foodItem.id, 1));
 
-    const removeItemFromCart = () => setCart(prevCart => updateCart(prevCart, id, -1));
+    const removeItemFromCart = () => setCart(prevCart => updateCart(prevCart, foodItem.id, -1));
 
     return (
         <article>
-            <p>{itemName}</p>
-            <div role="group">
+            <h3>{foodItem.name}</h3>
+            <div role="group" aria-live="polite">
                 {itemInCart ? (
                     <>
                         <span>{`Quantity: ${quantity}`}</span>
-                        <button onClick={removeItemFromCart} disabled={quantity === 0}>
+                        <button onClick={removeItemFromCart} disabled={quantity === 0} aria-label="Decrease quantity">
                             -
                         </button>
-                        <button onClick={addItemToCart}>
+                        <button onClick={addItemToCart} aria-label="Increase quantity">
                             +
                         </button>
                     </>

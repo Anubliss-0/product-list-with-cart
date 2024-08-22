@@ -1,7 +1,6 @@
 type CartProps = {
     id: number;
     quantity: number;
-    price: number;
 };
 
 type ConfirmationModalProps = {
@@ -11,7 +10,7 @@ type ConfirmationModalProps = {
     setShowConfirmation: React.Dispatch<React.SetStateAction<boolean>>
 };
 
-function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmation }: ConfirmationModalProps) {
+function ConfirmationModal({ setCart, showConfirmation, setShowConfirmation }: ConfirmationModalProps) {
 
     const resetCart = () => {
         setCart([])

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { flattenAndMapData } from "./CartUtils";
 
 type CartProps = {
@@ -29,25 +28,27 @@ function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
     };
 
     return (
-        <div>
-            <h3>Your cart</h3>
-            {cart.map((item) => {
-                const product = dataMap.get(item.id);
-                return (
-                    <>
-                        <div key={item.id}>
+        <>
+            <h2>Your cart</h2>
+            <ul aria-live="polite">
+                {cart.map((item) => {
+                    const product = dataMap.get(item.id);
+                    return (
+                        <li key={item.id}>
                             <span>Item Name: {product?.name}</span>
                             <span>Quantity: {item.quantity}</span>
                             <span>Price: {product?.price}</span>
                             <span>Total: {product?.price * item.quantity}</span>
-                            <button onClick={() => removeFromCart(item.id)}>X</button>
-                        </div>
-                    </>
-                );
-            })}
+                            <button onClick={() => removeFromCart(item.id)} aria-label={`Remove ${product?.name} from cart`}>
+                                X
+                            </button>
+                        </li>
+                    );
+                })}
+            </ul>
             <h4>Total Amount: {total}</h4>
             {cart.length > 0 && <button onClick={showConfirmation}>Confirm Order</button>}
-        </div>
+        </>
     );
 }
 
