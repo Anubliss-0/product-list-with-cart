@@ -1,4 +1,5 @@
 import { useCart } from "../../App";
+import styles from "./ProductCard.module.scss"
 
 type CartProps = {
     id: number;
@@ -49,7 +50,21 @@ function ProductCard({ foodItem }: ProductCardProps) {
     const removeItemFromCart = () => setCart(prevCart => updateCart(prevCart, foodItem.id, -1));
 
     return (
-        <article>
+        <article className={styles.productCard}>
+            <img
+                srcSet={`
+                    ${foodItem.image.mobile} 480w,
+                    ${foodItem.image.tablet} 768w,
+                    ${foodItem.image.desktop} 1200w
+                `}
+                sizes={`
+                    (max-width: 480px) 480px,
+                    (max-width: 768px) 768px,
+                    1200px
+                `}
+                src={foodItem.image.desktop}
+                alt={foodItem.name}
+            />
             <h3>{foodItem.name}</h3>
             <div role="group" aria-live="polite">
                 {itemInCart ? (

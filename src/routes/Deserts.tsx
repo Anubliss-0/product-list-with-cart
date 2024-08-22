@@ -1,5 +1,5 @@
 import ProductCard from '../components/ProductCard/ProductCard';
-import data from '../assets/data.json'
+import data from '../data.json'
 import styles from "./ProductList.module.scss"
 
 function Deserts() {
