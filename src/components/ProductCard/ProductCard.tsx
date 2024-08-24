@@ -65,7 +65,6 @@ function ProductCard({ foodItem }: ProductCardProps) {
                 src={foodItem.image.desktop}
                 alt={foodItem.name}
             />
-            <h3>{foodItem.name}</h3>
             <div role="group" aria-live="polite">
                 {itemInCart ? (
                     <>
@@ -84,6 +83,9 @@ function ProductCard({ foodItem }: ProductCardProps) {
                     </>)
                 }
             </div>
+            <span>{foodItem.category}</span>
+            <h3>{foodItem.name}</h3>
+            <span>{foodItem.price.toFixed(2)}</span>
         </article>
     );
 }

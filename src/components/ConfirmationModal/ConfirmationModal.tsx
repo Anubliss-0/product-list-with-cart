@@ -1,3 +1,5 @@
+import { flattenAndMapData } from "../../utils/flattenAndMapData";
+
 type CartProps = {
     id: number;
     quantity: number;
@@ -10,7 +12,13 @@ type ConfirmationModalProps = {
     setShowConfirmation: React.Dispatch<React.SetStateAction<boolean>>
 };
 
-function ConfirmationModal({ setCart, showConfirmation, setShowConfirmation }: ConfirmationModalProps) {
+const dataMap = flattenAndMapData();
+
+function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmation }: ConfirmationModalProps) {
+    const total = cart.reduce((sum, item) => {
+        const product = dataMap.get(item.id);
+        return sum + (product ? product.price * (item.quantity || 1) : 0);
+    }, 0);
 
     const resetCart = () => {
         setCart([])
@@ -21,8 +29,22 @@ function ConfirmationModal({ setCart, showConfirmation, setShowConfirmation }: C
 
     return (
         <div>
-            Order confirmed.
-            <button onClick={resetCart}>New order</button>
+            Order confirmed
+            <ul aria-live="polite">
+                {cart.map((item) => {
+                    const product = dataMap.get(item.id);
+                    return (
+                        <li key={item.id}>
+                            <span>Item Name: {product?.name ?? 'Unknown'}</span>
+                            <span>Quantity: {item.quantity}</span>
+                            <span>Price: {product?.price ?? 0}</span>
+                            <span>Total: {(product?.price ?? 0) * item.quantity}</span>
+                        </li>
+                    );
+                })}
+            </ul>
+            <h4>Total Amount: {total.toFixed(2)}</h4>
+            <button onClick={resetCart}>Start new order</button>
         </div>
     );
 }
