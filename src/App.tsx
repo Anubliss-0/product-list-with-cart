@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Outlet, Link, useOutletContext } from "react-router-dom";
+import { useTranslation } from "./i18n";
 import styles from "./App.module.scss"
 import Cart from "./components/Cart/Cart";
 import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal";
@@ -15,6 +16,7 @@ type CartContextType = {
 };
 
 function App() {
+  const { t } = useTranslation();
   const [cart, setCart] = useState<{ id: number; quantity: number }[]>([]);
   const [showConfirmation, setShowConfirmation] = useState<boolean>(false);
 
@@ -23,9 +25,9 @@ function App() {
       <div>
         <header>
           <nav>
-            <Link to={`starters`}>Starters</Link>
+            <Link to={`starters`}>{t("starters.title")}</Link>
             <Link to={`mains`}>Mains</Link>
-            <Link to={`deserts`}>Deserts</Link>
+            <Link to={`deserts`}>{t("desserts.title")}</Link>
           </nav>
         </header>
         <section>

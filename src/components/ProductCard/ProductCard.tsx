@@ -1,4 +1,6 @@
 import { useCart } from "../../App";
+import { useTranslation } from "../../i18n";
+
 import styles from "./ProductCard.module.scss"
 
 type CartProps = {
@@ -7,6 +9,7 @@ type CartProps = {
 };
 
 type ProductCardProps = {
+    section: string;
     foodItem: {
         id: number;
         name: string;
@@ -22,7 +25,8 @@ type ProductCardProps = {
 };
 
 
-function ProductCard({ foodItem }: ProductCardProps) {
+function ProductCard({ foodItem, section }: ProductCardProps) {
+    const { t } = useTranslation();
     const { cart, setCart } = useCart();
     const itemInCart = cart.find(item => item.id === foodItem.id);
     const quantity = itemInCart ? itemInCart.quantity : 0;
@@ -63,28 +67,28 @@ function ProductCard({ foodItem }: ProductCardProps) {
                     1200px
                 `}
                 src={foodItem.image.desktop}
-                alt={foodItem.name}
+                alt={t(`${section}.items.${foodItem.name}`)}
             />
             <div role="group" aria-live="polite">
                 {itemInCart ? (
                     <>
                         <span>{`Quantity: ${quantity}`}</span>
-                        <button onClick={removeItemFromCart} disabled={quantity === 0} aria-label="Decrease quantity">
+                        <button onClick={removeItemFromCart} disabled={quantity === 0} aria-label={t(`ariaLabels.decreaseQuantity`)}>
                             -
                         </button>
-                        <button onClick={addItemToCart} aria-label="Increase quantity">
+                        <button onClick={addItemToCart} aria-label={t(`ariaLabels.increaseQuantity`)}>
                             +
                         </button>
                     </>
                 )
                     :
                     (<>
-                        <button onClick={addItemToCart}>Add to cart</button>
+                        <button onClick={addItemToCart}>{t(`addToCart`)}</button>
                     </>)
                 }
             </div>
-            <span>{foodItem.category}</span>
-            <h3>{foodItem.name}</h3>
+            <span>{t(`${section}.category.${foodItem.category}`)}</span>
+            <h3>{t(`${section}.items.${foodItem.name}`)}</h3>
             <span>{foodItem.price.toFixed(2)}</span>
         </article>
     );

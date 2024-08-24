@@ -8,7 +8,7 @@ function Starters() {
       <h1>Starters</h1>
       <div className={styles.itemList}>
         {data.starters.map((foodItem) => (
-          <ProductCard key={foodItem.id} foodItem={foodItem}/>
+          <ProductCard key={foodItem.id} foodItem={foodItem} section='starters'/>
         ))}
       </div>
     </>

@@ -7,8 +7,8 @@ function Deserts() {
     <>
       <h1>Deserts</h1>
       <div className={styles.itemList}>
-        {data.deserts.map((foodItem) => (
-          <ProductCard key={foodItem.id} foodItem={foodItem}/>
+        {data.desserts.map((foodItem) => (
+          <ProductCard key={foodItem.id} foodItem={foodItem} section='desserts'/>
         ))}
       </div>
     </>
