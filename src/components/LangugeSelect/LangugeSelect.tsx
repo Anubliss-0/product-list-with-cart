@@ -5,7 +5,6 @@ function LanguageSelect() {
     const { t } = useTranslation();
 
     const changeLanguage = (event: ChangeEvent<HTMLSelectElement>) => {
-        console.log("Changing!?")
         const selectedLanguage = event.target.value;
         i18n.changeLanguage(selectedLanguage);
     };
