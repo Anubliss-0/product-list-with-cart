@@ -4,6 +4,7 @@ import { useTranslation } from "./i18n";
 import styles from "./App.module.scss"
 import Cart from "./components/Cart/Cart";
 import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal";
+import LanguageSelect from "./components/LangugeSelect/LangugeSelect";
 
 type CartProps = {
   id: number;
@@ -21,37 +22,40 @@ function App() {
   const [showConfirmation, setShowConfirmation] = useState<boolean>(false);
 
   return (
-    <main className={styles.container}>
-      <div>
-        <header>
-          <nav>
-            <Link to={`starters`}>{t("starters.title")}</Link>
-            <Link to={`mains`}>Mains</Link>
-            <Link to={`deserts`}>{t("desserts.title")}</Link>
-          </nav>
-        </header>
-        <section>
-          <Outlet context={{ cart, setCart }} />
-        </section>
-      </div>
-      <div>
-        <section>
-          <Cart
-            cart={cart}
-            setCart={setCart}
-            setShowConfirmation={setShowConfirmation}
-          />
-        </section>
-        <section>
-          <ConfirmationModal
-            cart={cart}
-            setCart={setCart}
-            showConfirmation={showConfirmation}
-            setShowConfirmation={setShowConfirmation}
-          />
-        </section>
-      </div>
-    </main>
+    <>
+    <LanguageSelect />
+      <main className={styles.container}>
+        <div>
+          <header>
+            <nav>
+              <Link to={`starters`}>{t("starters.title")}</Link>
+              <Link to={`mains`}>Mains</Link>
+              <Link to={`deserts`}>{t("desserts.title")}</Link>
+            </nav>
+          </header>
+          <section>
+            <Outlet context={{ cart, setCart }} />
+          </section>
+        </div>
+        <div>
+          <section>
+            <Cart
+              cart={cart}
+              setCart={setCart}
+              setShowConfirmation={setShowConfirmation}
+            />
+          </section>
+          <section>
+            <ConfirmationModal
+              cart={cart}
+              setCart={setCart}
+              showConfirmation={showConfirmation}
+              setShowConfirmation={setShowConfirmation}
+            />
+          </section>
+        </div>
+      </main>
+    </>
   )
 }
 

@@ -53,7 +53,56 @@ i18n
                         "increaseQuantity": "Increase quantity",
                     }
                 }
-            },  
+            },
+            nl: {
+                "translation": {
+                    "addToCart": "Toevoegen",
+                    "starters": {
+                        "title": "Voorgerechten",
+                        "category": {
+                            "appetizer": "Aperitief",
+                            "bread": "Brood",
+                            "salad": "Salade"
+                        },
+                        "items": {
+                            "bruschetta": "Bruschetta",
+                            "stuffedMushrooms": "Gevulde Champignons",
+                            "garlicBreadsticks": "Knoflook Broodstengels",
+                            "capreseSalad": "Caprese Salade",
+                            "miniQuiches": "Mini Quiches"
+                        }
+                    },
+                    "desserts": {
+                        "title": "Nagerechten",
+                        "category": {
+                            "waffle": "Wafel",
+                            "cremeBrulee": "Crème Brûlée",
+                            "macaron": "Macaron",
+                            "tiramisu": "Tiramisu",
+                            "baklava": "Baklava",
+                            "cake": "Taart",
+                            "brownie": "Brownie",
+                            "pannaCotta": "Panna Cotta",
+                            "pie": "Taart"
+                        },
+                        "items": {
+                            "waffleWithBerries": "Wafel met Bessen",
+                            "vanillaBeanCremeBrulee": "Vanilleboon Crème Brûlée",
+                            "macaronMixofFive": "Macaron Mix van Vijf",
+                            "classicTiramisu": "Klassieke Tiramisu",
+                            "pistachioBaklava": "Pistache Baklava",
+                            "lemonMeringuePie": "Citroen Meringue Taart",
+                            "redVelvetCake": "Red Velvet Taart",
+                            "saltedCaramelBrownie": "Gezouten Karamel Brownie",
+                            "vanillaPannaCotta": "Vanille Panna Cotta"
+                        }
+                    },
+                    "ariaLabels": {
+                        "decreaseQuantity": "Hoeveelheid verminderen",
+                        "increaseQuantity": "Hoeveelheid verhogen"
+                    }
+                }
+            }
         },
         lng: "en",
         fallbackLng: "en",
