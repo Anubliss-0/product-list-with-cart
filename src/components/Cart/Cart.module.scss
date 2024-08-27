@@ -13,6 +13,11 @@
         @include text-preset-2;
         color: $red;
     }
+
+    @include respond-to-tablet {
+        position: relative;
+        width: 100%;
+    }
 }
 
 .cartItem {

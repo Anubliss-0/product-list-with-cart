@@ -12,6 +12,7 @@
     @include respond-to-tablet {
         grid-template-columns: repeat(auto-fill, 13.3125rem);
         grid-template-rows: 19.9375rem;
+        justify-content: space-between;
     }
 
     @include respond-to-phone {

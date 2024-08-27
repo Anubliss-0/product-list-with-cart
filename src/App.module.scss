@@ -1,17 +1,32 @@
 @import "./styles/variables.scss";
+@import "./styles/utilities.scss";
 
 .container {
     display: flex;
     margin: 88px 112px;
+
+    @include respond-to-tablet {
+        @include flex-column-center;
+        margin: $spacing-500;
+    }
 }
 
 .products {
     display: flex;
     flex-direction: column;
     flex: 1;
+
+    @include respond-to-tablet {
+        width: 100%;
+    }
 }
 
 .cart {
-    width: 24rem;
+    min-width: 24rem;
     margin-left: $spacing-400;
+
+    @include respond-to-tablet {
+        width: 100%;
+        margin: 0;
+    }
 }
