@@ -19,6 +19,10 @@
     @include respond-to-tablet {
         width: 100%;
     }
+
+    @include respond-to-phone {
+        width: auto;
+    }
 }
 
 .cart {
