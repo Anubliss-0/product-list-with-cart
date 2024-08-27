@@ -56,20 +56,12 @@ function ProductCard({ foodItem, section }: ProductCardProps) {
 
     return (
         <article className={styles.productCard}>
-            <img className={itemInCart ? styles.inCart : ""}
-                srcSet={`
-                    ${foodItem.image.mobile} 480w,
-                    ${foodItem.image.tablet} 768w,
-                    ${foodItem.image.desktop} 1200w
-                `}
-                sizes={`
-                    (max-width: 480px) 480px,
-                    (max-width: 768px) 768px,
-                    1200px
-                `}
-                src={foodItem.image.desktop}
-                alt={t(`${section}.items.${foodItem.name}`)}
-            />
+            <picture>
+                <source media="(max-width: 375px)" srcSet={foodItem.image.mobile} />
+                <source media="(max-width: 768px)" srcSet={foodItem.image.tablet} />
+                <source media="(min-width: 769px)" srcSet={foodItem.image.desktop} />
+                <img src="./assets/images/image-waffle-desktop.jpg" alt={t(foodItem.name)} />
+            </picture>
             <div role="group" aria-live="polite">
                 {itemInCart ? (
                     <>

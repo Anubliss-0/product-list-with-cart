@@ -4,7 +4,9 @@
 
 .productCard {
     @include flex-column-center;
+}
 
+picture {
     >img {
         border-radius: 8%;
         width: 100%;
@@ -94,9 +96,9 @@
         color: $red;
     }
 
-     h3 {
+    h3 {
         @include text-preset-3;
         margin: 0rem;
         color: $rose-900;
-     }
+    }
 }
