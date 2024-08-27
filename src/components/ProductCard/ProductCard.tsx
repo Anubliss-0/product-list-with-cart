@@ -1,5 +1,6 @@
 import { useCart } from "../../App";
 import { useTranslation } from "../../i18n";
+import addToCartIcon from "../../assets/icons/icon-add-to-cart.svg"
 
 import styles from "./ProductCard.module.scss"
 
@@ -55,7 +56,7 @@ function ProductCard({ foodItem, section }: ProductCardProps) {
 
     return (
         <article className={styles.productCard}>
-            <img
+            <img className={itemInCart ? styles.inCart : ""}
                 srcSet={`
                     ${foodItem.image.mobile} 480w,
                     ${foodItem.image.tablet} 768w,
@@ -72,18 +73,34 @@ function ProductCard({ foodItem, section }: ProductCardProps) {
             <div role="group" aria-live="polite">
                 {itemInCart ? (
                     <>
-                        <span>{`Quantity: ${quantity}`}</span>
-                        <button onClick={removeItemFromCart} disabled={quantity === 0} aria-label={t(`ariaLabels.decreaseQuantity`)}>
-                            -
-                        </button>
-                        <button onClick={addItemToCart} aria-label={t(`ariaLabels.increaseQuantity`)}>
-                            +
-                        </button>
+                        <fieldset className={[styles.quantityButtons, styles.cartPill].join(' ')}>
+                            <button
+                                onClick={removeItemFromCart}
+                                disabled={quantity === 0}
+                                aria-label={t(`ariaLabels.decreaseQuantity`)}
+                                className={styles.quantityIcon}
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2"><path d="M0 .375h10v1.25H0V.375Z" /></svg>                            </button>
+                            <span>{quantity}</span>
+                            <button onClick={addItemToCart}
+                                aria-label={t(`ariaLabels.increaseQuantity`)}
+                                className={styles.quantityIcon}
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" /></svg>
+                            </button>
+                        </fieldset>
                     </>
                 )
                     :
                     (<>
-                        <button onClick={addItemToCart}>{t(`addToCart`)}</button>
+                        <button
+                            onClick={addItemToCart}
+                            className={[styles.addButton, styles.cartPill].join(' ')}
+                            aria-label={t("addToCart")}
+                        >
+                            <img src={addToCartIcon} />
+                            {t(`addToCart`)}
+                        </button>
                     </>)
                 }
             </div>

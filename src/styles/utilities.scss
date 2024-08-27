@@ -35,6 +35,13 @@
     align-items: stretch;
 }
 
+@mixin flex-row-center-justify-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @mixin flex-row-start {
     display: flex;
     flex-direction: row;

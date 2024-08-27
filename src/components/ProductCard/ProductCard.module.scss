@@ -1,6 +1,75 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+@import "../../styles/utilities.scss";
+
 .productCard {
+    @include flex-column-center;
+
     >img {
         border-radius: 8%;
         width: 100%;
+    }
+}
+
+.inCart {
+    outline: 2px solid $red;
+}
+
+.cartPill {
+    position: relative;
+    top: -50%;
+    border-radius: 999px;
+    height: 2.75rem;
+    width: 10rem;
+}
+
+.addButton {
+    @include text-preset-4-bold;
+    @include flex-row-center;
+    color: $rose-900;
+    background-color: $white;
+    border: .0625rem solid $rose-400;
+
+    img {
+        margin-right: $spacing-100;
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        color: $red;
+        border-color: $red;
+    }
+}
+
+.quantityButtons {
+    @include flex-row-center-justify-between;
+    color: $white;
+    background-color: $red;
+    border: none;
+    padding: 0 0.8281rem
+}
+
+.quantityIcon {
+    @include flex-row-center;
+    background: none;
+    border: 0.0938rem solid $white;
+    height: 1.0938rem;
+    width: 1.0938rem;
+    padding: 0rem;
+    border-radius: 50%;
+
+    svg {
+        width: 0.625rem;
+        height: 0.625rem;
+        fill: $white;
+    }
+
+    &:hover {
+        background-color: $white;
+
+        svg {
+            fill: $red;
+        }
     }
 }
