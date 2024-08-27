@@ -1,12 +1,18 @@
 @import "../styles/variables.scss";
 @import "../styles/typography.scss";
+@import "../styles/utilities.scss";
 
 .itemList {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-columns: repeat(auto-fill, 15.625rem);
     grid-template-rows: 21.6875rem;
     grid-column-gap: $spacing-300;
     grid-row-gap: $spacing-400;
+
+    @include respond-to-tablet {
+        grid-template-columns: repeat(auto-fill, 13.3125rem);
+        grid-template-rows: 19.9375rem;
+    }
 }
 
 .title {
