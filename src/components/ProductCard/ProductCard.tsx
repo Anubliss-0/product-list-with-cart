@@ -1,5 +1,6 @@
 import { useCart } from "../../App";
 import { useTranslation } from "../../i18n";
+// TODO: remove this import and use svg like other icons, will need re-doing in scss as well!
 import addToCartIcon from "../../assets/icons/icon-add-to-cart.svg"
 
 import styles from "./ProductCard.module.scss"

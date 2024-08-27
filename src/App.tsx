@@ -23,37 +23,33 @@ function App() {
 
   return (
     <>
-    <LanguageSelect />
+      <header>
+      </header>
       <main className={styles.container}>
-        <div>
-          <header>
-            <nav>
-              <Link to={`starters`}>{t("starters.title")}</Link>
-              <Link to={`mains`}>Mains</Link>
-              <Link to={`deserts`}>{t("desserts.title")}</Link>
-            </nav>
-          </header>
+        <div className={styles.products}>
+        <nav>
+          <LanguageSelect />
+          <Link to={`starters`}>{t("starters.title")}</Link>
+          <Link to={`mains`}>Mains</Link>
+          <Link to={`deserts`}>{t("desserts.title")}</Link>
+        </nav>
           <section>
             <Outlet context={{ cart, setCart }} />
           </section>
         </div>
-        <div>
-          <section>
-            <Cart
-              cart={cart}
-              setCart={setCart}
-              setShowConfirmation={setShowConfirmation}
-            />
-          </section>
-          <section>
-            <ConfirmationModal
-              cart={cart}
-              setCart={setCart}
-              showConfirmation={showConfirmation}
-              setShowConfirmation={setShowConfirmation}
-            />
-          </section>
+        <div className={styles.cart}>
+          <Cart
+            cart={cart}
+            setCart={setCart}
+            setShowConfirmation={setShowConfirmation}
+          />
         </div>
+        <ConfirmationModal
+          cart={cart}
+          setCart={setCart}
+          showConfirmation={showConfirmation}
+          setShowConfirmation={setShowConfirmation}
+        />
       </main>
     </>
   )

@@ -1,4 +1,36 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+@import "../../styles/utilities.scss";
+
+.cart {
+    background-color: $white;
+    padding: $spacing-300;
+    border-radius: .75rem;
+    width: 384px;
+    position: fixed;
+
+    >h2 {
+        @include text-preset-2;
+        color: $red;
+    }
+}
+
 .cartItem {
     display: flex;
     flex-direction: column;
+}
+
+.emptyCart {
+    @include flex-column-center;
+
+    img {
+        margin-top: $spacing-500;
+        margin-bottom: $spacing-200;
+    }
+
+    span {
+        @include text-preset-4-bold;
+        color: $rose-500;
+        margin-bottom: $spacing-200;
+    }
 }
