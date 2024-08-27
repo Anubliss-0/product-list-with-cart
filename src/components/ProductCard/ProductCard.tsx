@@ -104,9 +104,11 @@ function ProductCard({ foodItem, section }: ProductCardProps) {
                     </>)
                 }
             </div>
-            <span>{t(`${section}.category.${foodItem.category}`)}</span>
-            <h3>{t(`${section}.items.${foodItem.name}`)}</h3>
-            <span>{foodItem.price.toFixed(2)}</span>
+            <div className={styles.cardText}>
+                <span>{t(`${section}.category.${foodItem.category}`)}</span>
+                <h3>{t(`${section}.items.${foodItem.name}`)}</h3>
+                <span>€{foodItem.price.toFixed(2)}</span>
+            </div>
         </article>
     );
 }
