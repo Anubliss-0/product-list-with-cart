@@ -1,3 +1,4 @@
+import { useTranslation } from "../../i18n";
 import { flattenAndMapData } from "../../utils/flattenAndMapData";
 import styles from "./Cart.module.scss"
 import emptyCartImage from "../../../public/assets/images/illustration-empty-cart.svg"
@@ -16,6 +17,8 @@ type CartComponentProps = {
 const dataMap = flattenAndMapData();
 
 function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
+    const { t } = useTranslation();
+
     const total = cart.reduce((sum, item) => {
         const product = dataMap.get(item.id);
         return sum + (product ? product.price * (item.quantity || 1) : 0);
@@ -37,14 +40,18 @@ function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
                     {cart.map((item) => {
                         const product = dataMap.get(item.id);
                         return (
-                            <li key={item.id}>
-                                <span>Item Name: {product?.name ?? 'Unknown'}</span>
-                                <span>Quantity: {item.quantity}</span>
-                                <span>Price: {product?.price ?? 0}</span>
-                                <span>Total: {(product?.price ?? 0) * item.quantity}</span>
-                                <button onClick={() => removeFromCart(item.id)} aria-label={`Remove ${product?.name ?? 'Unknown'} from cart`}>
-                                    X
-                                </button>
+                            <li key={item.id} className={styles.cartItem}>
+                                    <div>
+                                        <p>{t(`${product?.section}.items.${product?.name}`)}</p>
+                                        <span>{item.quantity}x</span>
+                                        <span>{product?.price ?? 0}</span>
+                                        <span>{(product?.price ?? 0) * item.quantity}</span>
+                                    </div>
+                                    <div>
+                                        <button onClick={() => removeFromCart(item.id)} aria-label={`Remove ${product?.name ?? 'Unknown'} from cart`}>
+                                            X
+                                        </button>
+                                    </div>
                             </li>
                         );
                     })}
