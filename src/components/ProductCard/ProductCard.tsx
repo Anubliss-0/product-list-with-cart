@@ -59,8 +59,8 @@ function ProductCard({ foodItem, section }: ProductCardProps) {
         <article className={styles.productCard}>
             <picture>
                 <source media="(max-width: 530px)" srcSet={foodItem.image.mobile} />
-                <source media="(max-width: 768px)" srcSet={foodItem.image.tablet} />
-                <source media="(min-width: 769px)" srcSet={foodItem.image.desktop} />
+                <source media="(max-width: 1165px)" srcSet={foodItem.image.tablet} />
+                <source media="(min-width: 1165px)" srcSet={foodItem.image.desktop} />
                 <img src="./assets/images/image-waffle-desktop.jpg" alt={t(foodItem.name)} />
             </picture>
             <div role="group" aria-live="polite">

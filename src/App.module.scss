@@ -9,6 +9,10 @@
         @include flex-column-center;
         margin: $spacing-500;
     }
+
+    @include respond-to-phone {
+        margin: $spacing-300;
+    }
 }
 
 .products {
