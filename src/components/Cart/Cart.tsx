@@ -75,7 +75,7 @@ function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
                                 </Trans>
                             </p>
                         </div>
-                        <button onClick={showConfirmation}>Confirm Order</button>
+                        <button className={styles.confirmButton} onClick={showConfirmation}>Confirm Order</button>
                     </div>
                 </>
             ) : (

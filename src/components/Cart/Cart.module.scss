@@ -30,8 +30,8 @@
         margin: $spacing-200 0;
     }
 
-    >p {
-        margin: 0 0 .5rem 0;
+    hr:last-of-type {
+        margin: $spacing-300 0;
     }
 
     @include respond-to-tablet {
@@ -49,7 +49,8 @@
 .left {
     @include flex-column-start;
 
-    p {
+    >p {
+        margin: 0 0 .5rem 0;
         color: $rose-900;
     }
 
@@ -92,7 +93,7 @@
 
 .total {
     @include flex-row-center-justify-between;
-    padding: $spacing-300 0;
+    margin-bottom: $spacing-300;
 
     span {
         @include text-preset-4;
@@ -119,6 +120,24 @@
     width: 100%;
     padding: 0 $spacing-200;
     border-radius: 8px;
+
+    svg {
+        margin-right: $spacing-100;
+    }
+}
+
+.confirmButton {
+    @include text-preset-3;
+    width: 100%;
+    height: 3.3125rem;
+    background-color: $red;
+    color: $white;
+    border-radius: 999px;
+    border: none;
+
+    &:hover {
+        background-color: $dark-red;
+    }
 }
 
 .emptyCart {

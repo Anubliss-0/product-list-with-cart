@@ -8,7 +8,7 @@ i18n
             en: {
                 translation: {
                     "addToCart": "Add to Cart",
-                    "carbonNeutral": "this is a <1>carbon-neutral</1> delivery",
+                    "carbonNeutral": "This is a <1>carbon-neutral</1> delivery",
                     "starters": {
                         "title": "Starters",
                         "category": {
@@ -58,7 +58,7 @@ i18n
             nl: {
                 "translation": {
                     "addToCart": "Toevoegen",
-                    "carbonNeutral": "dit is een <1>koolstofneutrale</1> levering",
+                    "carbonNeutral": "Dit is een <1>koolstofneutrale</1> levering",
                     "starters": {
                         "title": "Voorgerechten",
                         "category": {
