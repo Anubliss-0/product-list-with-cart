@@ -4,9 +4,9 @@
             "id": 1,
             "image": {
                 "thumbnail": "https://picsum.photos/200/300?random=1",
-                "mobile": "https://picsum.photos/300/400?random=1",
-                "tablet": "https://picsum.photos/500/600?random=1",
-                "desktop": "https://picsum.photos/700/800?random=1"
+                "mobile": "https://picsum.photos/327/212?random=1",
+                "tablet": "https://picsum.photos/213/213?random=1",
+                "desktop": "https://picsum.photos/250/240?random=1"
             },
             "name": "bruschetta",
             "category": "appetizer",
@@ -16,9 +16,9 @@
             "id": 2,
             "image": {
                 "thumbnail": "https://picsum.photos/200/300?random=2",
-                "mobile": "https://picsum.photos/300/400?random=2",
-                "tablet": "https://picsum.photos/500/600?random=2",
-                "desktop": "https://picsum.photos/700/800?random=2"
+                "mobile": "https://picsum.photos/327/212?random=2",
+                "tablet": "https://picsum.photos/213/213?random=2",
+                "desktop": "https://picsum.photos/250/240?random=2"
             },
             "name": "stuffedMushrooms",
             "category": "appetizer",
@@ -28,9 +28,9 @@
             "id": 3,
             "image": {
                 "thumbnail": "https://picsum.photos/200/300?random=3",
-                "mobile": "https://picsum.photos/300/400?random=3",
-                "tablet": "https://picsum.photos/500/600?random=3",
-                "desktop": "https://picsum.photos/700/800?random=3"
+                "mobile": "https://picsum.photos/327/212?random=3",
+                "tablet": "https://picsum.photos/213/213?random=3",
+                "desktop": "https://picsum.photos/250/240?random=3"
             },
             "name": "garlicBreadsticks",
             "category": "bread",
@@ -40,9 +40,9 @@
             "id": 4,
             "image": {
                 "thumbnail": "https://picsum.photos/200/300?random=4",
-                "mobile": "https://picsum.photos/300/400?random=4",
-                "tablet": "https://picsum.photos/500/600?random=4",
-                "desktop": "https://picsum.photos/700/800?random=4"
+                "mobile": "https://picsum.photos/327/212?random=4",
+                "tablet": "https://picsum.photos/213/213?random=4",
+                "desktop": "https://picsum.photos/250/240?random=4"
             },
             "name": "capreseSalad",
             "category": "salad",
@@ -52,9 +52,9 @@
             "id": 5,
             "image": {
                 "thumbnail": "https://picsum.photos/200/300?random=5",
-                "mobile": "https://picsum.photos/300/400?random=5",
-                "tablet": "https://picsum.photos/500/600?random=5",
-                "desktop": "https://picsum.photos/700/800?random=5"
+                "mobile": "https://picsum.photos/327/212?random=5",
+                "tablet": "https://picsum.photos/213/213?random=5",
+                "desktop": "https://picsum.photos/250/240?random=5"
             },
             "name": "miniQuiches",
             "category": "appetizer",
