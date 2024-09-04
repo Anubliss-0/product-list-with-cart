@@ -30,13 +30,13 @@
         margin: $spacing-200 0;
     }
 
+    >p {
+        margin: 0 0 .5rem 0;
+    }
+
     @include respond-to-tablet {
         position: relative;
         width: 100%;
-    }
-
-    @include respond-to-phone {
-        // max-width: 20.4375rem;
     }
 }
 
@@ -117,7 +117,7 @@
     background-color: $rose-50;
     margin-bottom: $spacing-300;
     width: 100%;
-    padding: $spacing-200 0;
+    padding: 0 $spacing-200;
     border-radius: 8px;
 }
 

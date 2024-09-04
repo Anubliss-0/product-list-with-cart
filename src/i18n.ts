@@ -1,5 +1,5 @@
 import i18n from 'i18next';
-import { initReactI18next, useTranslation } from 'react-i18next';
+import { initReactI18next, useTranslation, Trans } from 'react-i18next';
 
 i18n
     .use(initReactI18next)
@@ -8,6 +8,7 @@ i18n
             en: {
                 translation: {
                     "addToCart": "Add to Cart",
+                    "carbonNeutral": "this is a <1>carbon-neutral</1> delivery",
                     "starters": {
                         "title": "Starters",
                         "category": {
@@ -57,6 +58,7 @@ i18n
             nl: {
                 "translation": {
                     "addToCart": "Toevoegen",
+                    "carbonNeutral": "dit is een <1>koolstofneutrale</1> levering",
                     "starters": {
                         "title": "Voorgerechten",
                         "category": {
@@ -111,4 +113,4 @@ i18n
         }
     });
 
-export { i18n, useTranslation };
+export { i18n, useTranslation, Trans };
