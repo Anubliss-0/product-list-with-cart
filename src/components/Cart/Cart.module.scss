@@ -2,26 +2,123 @@
 @import "../../styles/typography.scss";
 @import "../../styles/utilities.scss";
 
-.cart {
+.cartItems {
     background-color: $white;
-    padding: $spacing-300;
+    padding: 0 $spacing-300;
     border-radius: .75rem;
     width: 384px;
     position: fixed;
+    max-height: 80%;
+    overflow-y: scroll;
 
     >h2 {
         @include text-preset-2;
         color: $red;
+        position: sticky;
+        top: 0%;
+        width: 100%;
+        background-color: $white;
+        padding-top: $spacing-300;
+    }
+
+    >ul {
+        padding: 0%;
+    }
+
+    hr {
+        border: 1px solid $rose-100;
+        margin: $spacing-200 0;
     }
 
     @include respond-to-tablet {
         position: relative;
         width: 100%;
     }
+
+    @include respond-to-phone {
+        // max-width: 20.4375rem;
+    }
 }
 
 .cartItem {
-    display: flex;
+    @include flex-row-center-justify-between;
+    @include text-preset-4-bold;
+
+}
+
+.left {
+    @include flex-column-start;
+
+    p {
+        color: $rose-900;
+    }
+
+    div {
+        @include flex-row-center;
+        gap: $spacing-100;
+
+
+        span:nth-of-type(1) {
+            color: $red;
+            margin-right: 9px;
+        }
+
+        span:nth-of-type(2) {
+            @include text-preset-4;
+            color: $rose-500;
+        }
+
+        span:nth-of-type(3) {
+            color: $rose-500;
+        }
+    }
+}
+
+.removeButton {
+    @include flex-row-center;
+    background: none;
+    border: 0.0938rem solid $rose-400;
+    fill: $rose-400;
+    height: 1.0938rem;
+    width: 1.0938rem;
+    padding: 0rem;
+    border-radius: 50%;
+
+    &:hover {
+        fill: $rose-900;
+        border: 0.0938rem solid $rose-900;
+    }
+}
+
+.total {
+    @include flex-row-center-justify-between;
+    padding: $spacing-300 0;
+
+    span {
+        @include text-preset-4;
+        color: $rose-900;
+    }
+
+    h4 {
+        @include text-preset-2;
+    }
+}
+
+.cartEnd {
+    position: sticky;
+    bottom: 0;
+    margin-top: auto;
+    background-color: $white;
+    padding-bottom: $spacing-300
+}
+
+.carbonInfo {
+    @include flex-row-center;
+    background-color: $rose-50;
+    margin-bottom: $spacing-300;
+    width: 100%;
+    padding: $spacing-200 0;
+    border-radius: 8px;
 }
 
 .emptyCart {
