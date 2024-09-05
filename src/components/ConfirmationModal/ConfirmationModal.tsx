@@ -46,6 +46,7 @@ function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmatio
                         const product = dataMap.get(item.id);
                         return (
                             <li key={item.id}>
+                                <img src={product?.image.thumbnail} alt="Thumbnail of food" />
                                 <span>Item Name: {product?.name ?? 'Unknown'}</span>
                                 <span>Quantity: {item.quantity}</span>
                                 <span>Price: {product?.price ?? 0}</span>

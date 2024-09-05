@@ -5,6 +5,9 @@ type Product = {
     name: string;
     price: number;
     section: string;
+    image: {
+        thumbnail: string;
+    };
 };
 
 export const flattenAndMapData = (): Map<number, Product> => {
