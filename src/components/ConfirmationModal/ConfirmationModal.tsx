@@ -1,4 +1,7 @@
+/// <reference types="vite-plugin-svgr/client" />
 import { flattenAndMapData } from "../../utils/flattenAndMapData";
+import styles from "./ConfirmationModal.module.scss"
+import ConfirmIcon from "../../assets/icons/icon-order-confirmed.svg?react"
 
 type CartProps = {
     id: number;
@@ -28,23 +31,26 @@ function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmatio
     if (!showConfirmation) return null;
 
     return (
-        <div>
-            Order confirmed
-            <ul aria-live="polite">
-                {cart.map((item) => {
-                    const product = dataMap.get(item.id);
-                    return (
-                        <li key={item.id}>
-                            <span>Item Name: {product?.name ?? 'Unknown'}</span>
-                            <span>Quantity: {item.quantity}</span>
-                            <span>Price: {product?.price ?? 0}</span>
-                            <span>Total: {(product?.price ?? 0) * item.quantity}</span>
-                        </li>
-                    );
-                })}
-            </ul>
-            <h4>Total Amount: {total.toFixed(2)}</h4>
-            <button onClick={resetCart}>Start new order</button>
+        <div className={styles.confirmationContainer}>
+            <div className={styles.confrmationModal}>
+                <ConfirmIcon />
+                Order confirmed
+                <ul aria-live="polite">
+                    {cart.map((item) => {
+                        const product = dataMap.get(item.id);
+                        return (
+                            <li key={item.id}>
+                                <span>Item Name: {product?.name ?? 'Unknown'}</span>
+                                <span>Quantity: {item.quantity}</span>
+                                <span>Price: {product?.price ?? 0}</span>
+                                <span>Total: {(product?.price ?? 0) * item.quantity}</span>
+                            </li>
+                        );
+                    })}
+                </ul>
+                <h4>Total Amount: {total.toFixed(2)}</h4>
+                <button onClick={resetCart}>Start new order</button>
+            </div>
         </div>
     );
 }

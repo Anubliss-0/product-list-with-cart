@@ -33,7 +33,7 @@ function App() {
       </header>
       <main className={styles.container}>
         <div className={styles.products}>
-            <Outlet context={{ cart, setCart }} />
+          <Outlet context={{ cart, setCart }} />
         </div>
         <div className={styles.cart}>
           <Cart
@@ -42,13 +42,15 @@ function App() {
             setShowConfirmation={setShowConfirmation}
           />
         </div>
+      </main>
+      <aside>
         <ConfirmationModal
           cart={cart}
           setCart={setCart}
           showConfirmation={showConfirmation}
           setShowConfirmation={setShowConfirmation}
         />
-      </main>
+      </aside>
     </>
   )
 }
