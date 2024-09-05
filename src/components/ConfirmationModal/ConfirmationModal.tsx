@@ -1,5 +1,6 @@
 /// <reference types="vite-plugin-svgr/client" />
 import { flattenAndMapData } from "../../utils/flattenAndMapData";
+import { useTranslation } from "../../i18n";
 import styles from "./ConfirmationModal.module.scss"
 import ConfirmIcon from "../../assets/icons/icon-order-confirmed.svg?react"
 
@@ -18,6 +19,8 @@ type ConfirmationModalProps = {
 const dataMap = flattenAndMapData();
 
 function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmation }: ConfirmationModalProps) {
+    const { t } = useTranslation();
+
     const total = cart.reduce((sum, item) => {
         const product = dataMap.get(item.id);
         return sum + (product ? product.price * (item.quantity || 1) : 0);
@@ -33,9 +36,12 @@ function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmatio
     return (
         <div className={styles.confirmationContainer}>
             <div className={styles.confrmationModal}>
-                <ConfirmIcon />
-                Order confirmed
-                <ul aria-live="polite">
+                <div className={styles.confirmStart}>
+                    <ConfirmIcon />
+                    <h1>{t("orderConfirmed")}</h1>
+                    <span>{t("enjoyYourFood")}</span>
+                </div>
+                <ul aria-live="polite" className={styles.confirmMiddle}>
                     {cart.map((item) => {
                         const product = dataMap.get(item.id);
                         return (
@@ -48,8 +54,10 @@ function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmatio
                         );
                     })}
                 </ul>
-                <h4>Total Amount: {total.toFixed(2)}</h4>
-                <button onClick={resetCart}>Start new order</button>
+                <div className={styles.confirmEnd}>
+                    <h4>Total Amount: {total.toFixed(2)}</h4>
+                    <button onClick={resetCart}>Start new order</button>
+                </div>
             </div>
         </div>
     );

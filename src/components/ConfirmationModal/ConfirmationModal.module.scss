@@ -1,11 +1,14 @@
 @import "../../styles/variables.scss";
 @import "../../styles/utilities.scss";
+@import "../../styles/typography.scss";
 
 .confrmationModal {
+    @include flex-column-start;
     position: absolute;
     background-color: $white;
     width: 37rem;
     padding: $spacing-500;
+    border-radius: .75rem;
 }
 
 .confirmationContainer {
@@ -15,4 +18,15 @@
     height: 100%;
     background-color: hsla(0, 0, 0, 50%);
     top: 0px;
+}
+
+.confirmStart {
+    h1 {
+        @include text-preset-1;
+        margin: $spacing-300 0 $spacing-100;
+    }
+}
+
+.confirmMiddle {
+    margin: $spacing-400 0;
 }
