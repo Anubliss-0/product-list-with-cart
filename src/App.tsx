@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Outlet, Link, useOutletContext } from "react-router-dom";
+import { Outlet, useOutletContext } from "react-router-dom";
 import { useTranslation } from "./i18n";
 import styles from "./App.module.scss"
 import Cart from "./components/Cart/Cart";
 import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal";
-import LanguageSelect from "./components/LangugeSelect/LangugeSelect";
+import Header from "./components/Header/Header";
 
 type CartProps = {
   id: number;
@@ -23,14 +23,7 @@ function App() {
 
   return (
     <>
-      <header className={styles.header}>
-        <nav>
-          <Link to={`starters`}>{t("starters.title")}</Link>
-          <Link to={`mains`}>Mains</Link>
-          <Link to={`deserts`}>{t("desserts.title")}</Link>
-        </nav>
-        <LanguageSelect />
-      </header>
+      < Header />
       <main className={styles.container}>
         <div className={styles.products}>
           <Outlet context={{ cart, setCart }} />

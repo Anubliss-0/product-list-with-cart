@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+@import "../../styles/utilities.scss";
+
+.header {
+    @include flex-row-center-justify-between;
+    width: 100%;
+    padding: $spacing-300 7.5rem;
+    position: fixed;
+    top: 0rem;
+    background: linear-gradient(to bottom, rgba(252, 248, 246, 1) 75%, rgba(252, 248, 246, 0) 100%);
+    z-index: 3;
+}
