@@ -34,7 +34,7 @@ function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmatio
     if (!showConfirmation) return null;
 
     return (
-        <div className={styles.confirmationContainer}>
+        <div className={styles.confirmationBackground}>
             <div className={styles.conformationModal}>
                 <div className={styles.confirmStart}>
                     <ConfirmIcon />
