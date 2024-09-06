@@ -9,6 +9,7 @@
     height: 100%;
     background-color: hsla(0, 0, 0, 50%);
     top: 0px;
+    z-index: 99;
 
     @include respond-to-phone {
         @include flex-column-end;
@@ -23,6 +24,7 @@
     max-height: 80%;
     padding: $spacing-500;
     border-radius: .75rem;
+    
 
 
     @include respond-to-tablet {

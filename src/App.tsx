@@ -23,13 +23,13 @@ function App() {
 
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <nav>
-          <LanguageSelect />
           <Link to={`starters`}>{t("starters.title")}</Link>
           <Link to={`mains`}>Mains</Link>
           <Link to={`deserts`}>{t("desserts.title")}</Link>
         </nav>
+        <LanguageSelect />
       </header>
       <main className={styles.container}>
         <div className={styles.products}>
