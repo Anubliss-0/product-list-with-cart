@@ -35,7 +35,7 @@ function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmatio
 
     return (
         <div className={styles.confirmationContainer}>
-            <div className={styles.confrmationModal}>
+            <div className={styles.conformationModal}>
                 <div className={styles.confirmStart}>
                     <ConfirmIcon />
                     <h1>{t("orderConfirmed")}</h1>
@@ -45,18 +45,32 @@ function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmatio
                     {cart.map((item) => {
                         const product = dataMap.get(item.id);
                         return (
-                            <li key={item.id}>
-                                <img src={product?.image.thumbnail} alt="Thumbnail of food" />
-                                <span>Item Name: {product?.name ?? 'Unknown'}</span>
-                                <span>Quantity: {item.quantity}</span>
-                                <span>Price: {product?.price ?? 0}</span>
-                                <span>Total: {(product?.price ?? 0) * item.quantity}</span>
-                            </li>
+                            <>
+                                <li key={item.id}>
+                                    <div className={styles.itemLeft}>
+                                        <img src={product?.image.thumbnail} alt="Thumbnail of food" />
+                                        <div>
+                                            <span>{product?.name ?? 'Unknown'}</span>
+                                            <div className={styles.itemLeftEnd}>
+                                                <span>{item.quantity}X </span>
+                                                <span>@ €{(product?.price ?? 0).toFixed(2)}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={styles.itemRight}>
+                                        <span>€{((product?.price ?? 0) * item.quantity).toFixed(2)}</span>
+                                    </div>
+                                </li>
+                                <hr />
+                            </>
                         );
                     })}
+                    <li className={styles.listTotal}>
+                        <span>{t("orderTotal")}</span>
+                        <span>€{total.toFixed(2)}</span>
+                    </li>
                 </ul>
                 <div className={styles.confirmEnd}>
-                    <h4>Total Amount: {total.toFixed(2)}</h4>
                     <button onClick={resetCart}>Start new order</button>
                 </div>
             </div>

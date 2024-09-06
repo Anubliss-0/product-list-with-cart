@@ -2,7 +2,7 @@
 @import "../../styles/utilities.scss";
 @import "../../styles/typography.scss";
 
-.confrmationModal {
+.conformationModal {
     @include flex-column-start;
     position: absolute;
     background-color: $white;
@@ -28,5 +28,93 @@
 }
 
 .confirmMiddle {
+    width: 100%;
     margin: $spacing-400 0;
+    padding: $spacing-300;
+    list-style: none;
+    background-color: $rose-50;
+    border-radius: .5rem;
+
+    li {
+        @include flex-row-center-justify-between;
+    }
+
+    hr {
+        border: 1px solid $rose-100;
+        margin: $spacing-200 0;
+    }
+}
+
+
+
+.itemLeft {
+    @include flex-row-start;
+
+    img {
+        width: 3rem;
+        height: 3rem;
+        margin-right: $spacing-200;
+        border-radius: 4px;
+    }
+
+    >div {
+        @include flex-column-space-between;
+
+        >span:nth-of-type(1) {
+            @include text-preset-4-bold;
+            color: $rose-900;
+        }
+    }
+}
+
+.itemLeftEnd {
+    @include flex-row;
+    gap: $spacing-100;
+
+    span:nth-of-type(1) {
+        @include text-preset-4-bold;
+        color: $red;
+    }
+
+    span:nth-of-type(2) {
+        @include text-preset-4;
+        color: $rose-500;
+    }
+}
+
+.itemRight {
+    >span {
+        @include text-preset-3;
+        color: $rose-900;
+    }
+}
+
+.listTotal {
+    span:nth-of-type(1) {
+        @include text-preset-4;
+        color: $rose-900;
+    }
+
+    span:nth-of-type(2) {
+        @include text-preset-2;
+        color: $rose-900;
+    }
+}
+
+.confirmEnd {
+    width: 100%;
+    
+    >button {
+        @include text-preset-3;
+        width: 100%;
+        height: 3.3125rem;
+        background-color: $red;
+        color: $white;
+        border-radius: 999px;
+        border: none;
+
+        &:hover {
+            background-color: $dark-red;
+        }
+    }
 }
