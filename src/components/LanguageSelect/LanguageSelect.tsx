@@ -1,5 +1,6 @@
 import { ChangeEvent } from 'react';
 import { i18n, useTranslation } from '../../i18n';
+import styles from "./LanguageSelect.module.scss";
 
 function LanguageSelect() {
     const { t } = useTranslation();
@@ -11,7 +12,7 @@ function LanguageSelect() {
 
     return (
         <div>
-            <label>{t('language')}
+            <label className={styles.languageSelect}>{t('language')}
                 <select onChange={changeLanguage}>
                     <option value="en">English</option>
                     <option value="nl">Nederlands</option>

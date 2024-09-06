@@ -1,5 +1,6 @@
 @import "../../styles/variables.scss";
 @import "../../styles/utilities.scss";
+@import "../../styles/typography.scss";
 
 .header {
     @include flex-row-center-justify-between;
@@ -9,4 +10,35 @@
     top: 0rem;
     background: linear-gradient(to bottom, rgba(252, 248, 246, 1) 75%, rgba(252, 248, 246, 0) 100%);
     z-index: 3;
+
+    >nav {
+        @include text-preset-2;
+        @include flex-row;
+        gap: $spacing-300;
+
+        a {
+            color: $rose-900;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .active {
+        text-decoration: underline;
+    }
+
+    .link {
+        text-decoration: none;
+      }
+      
+      .activeLink {
+        text-decoration: underline;
+      }
 }

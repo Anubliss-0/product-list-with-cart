@@ -1,21 +1,36 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useTranslation } from "../../i18n";
-import LanguageSelect from "../../components/LangugeSelect/LangugeSelect";
+import LanguageSelect from "../../components/LanguageSelect/LanguageSelect";
 import styles from "./Header.module.scss";
 
 function Header() {
     const { t } = useTranslation();
 
     return (
-        <header className={styles.header}>
-            <nav>
-                <Link to={`starters`}>{t("starters.title")}</Link>
-                <Link to={`mains`}>Mains</Link>
-                <Link to={`deserts`}>{t("desserts.title")}</Link>
-            </nav>
-            <LanguageSelect />
-        </header>
-    )
+    <header className={styles.header}>
+      <nav>
+        <NavLink
+          to="starters"
+          className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
+        >
+          {t('starters.title')}
+        </NavLink>
+        <NavLink
+          to="mains"
+          className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
+        >
+          Mains
+        </NavLink>
+        <NavLink
+          to="deserts"
+          className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
+        >
+          {t('desserts.title')}
+        </NavLink>
+      </nav>
+      <LanguageSelect />
+    </header>
+  );
 }
 
 export default Header;
