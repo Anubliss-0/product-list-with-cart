@@ -57,7 +57,7 @@ function ProductCard({ foodItem, section }: ProductCardProps) {
 
     return (
         <article className={styles.productCard}>
-            <picture>
+            <picture className={itemInCart ? styles.imageBorder : ''}>
                 <source media="(max-width: 530px)" srcSet={foodItem.image.mobile} />
                 <source media="(max-width: 1165px)" srcSet={foodItem.image.tablet} />
                 <source media="(min-width: 1165px)" srcSet={foodItem.image.desktop} />

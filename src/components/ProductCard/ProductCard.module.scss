@@ -102,3 +102,9 @@ picture {
         color: $rose-900;
     }
 }
+
+.imageBorder {
+    img {
+        outline: 0.125rem solid $red;
+    }
+}
