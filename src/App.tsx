@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Outlet, useOutletContext } from "react-router-dom";
-import { useTranslation } from "./i18n";
 import styles from "./App.module.scss"
 import Cart from "./components/Cart/Cart";
 import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal";
 import Header from "./components/Header/Header";
+import PhoneHeader from "./components/PhoneHeader/PhoneHeader";
 
 type CartProps = {
   id: number;
@@ -17,13 +17,13 @@ type CartContextType = {
 };
 
 function App() {
-  const { t } = useTranslation();
   const [cart, setCart] = useState<{ id: number; quantity: number }[]>([]);
   const [showConfirmation, setShowConfirmation] = useState<boolean>(false);
 
   return (
     <>
       < Header />
+      < PhoneHeader />
       <main className={styles.container}>
         <div className={styles.products}>
           <Outlet context={{ cart, setCart }} />

@@ -1,0 +1,31 @@
+@import "../../styles/variables.scss";
+@import "../../styles/utilities.scss";
+@import "../../styles/typography.scss";
+
+.phoneHeader {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0rem;
+    background-color: $rose-50;
+    z-index: 3;
+
+    @include respond-to-phone {
+        @include flex-row;
+    }
+
+    >nav {
+        @include flex-column-center;
+        transition: 0.5s;
+        position: absolute;
+        top: $spacing-200;
+        left: -100vw;
+        height: 100vh;
+        width: 100%;
+        background-color: $rose-50;
+
+        &.navOpen {
+            left: 0px;
+        }
+    }
+}

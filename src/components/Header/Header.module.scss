@@ -16,7 +16,7 @@
     }
 
     @include respond-to-phone {
-        @include flex-column-start-reverse;
+        display: none;
     }
 
     >nav {
