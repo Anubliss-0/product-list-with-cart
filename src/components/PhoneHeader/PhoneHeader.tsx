@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import Hamburger from 'hamburger-react';
 import { useTranslation } from "../../i18n";
 import LanguageSelect from "../../components/LanguageSelect/LanguageSelect";
 import styles from "./PhoneHeader.module.scss";
@@ -10,9 +11,7 @@ function Header() {
 
   return (
     <header className={styles.phoneHeader}>
-      <div className={styles.burger} onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        ☰
-      </div>
+      <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} />
       <nav className={isMenuOpen ? styles.navOpen : ''}>
         <NavLink
           to="starters"
@@ -35,8 +34,8 @@ function Header() {
         >
           {t('desserts.title')}
         </NavLink>
-      </nav>
       <LanguageSelect />
+      </nav>
     </header>
   );
 }

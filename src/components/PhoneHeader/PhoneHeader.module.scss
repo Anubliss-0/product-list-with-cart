@@ -7,22 +7,38 @@
     width: 100%;
     position: fixed;
     top: 0rem;
-    background-color: $rose-50;
+    background: linear-gradient(to bottom, rgba(252, 248, 246, 1) 75%, rgba(252, 248, 246, 0) 100%);
+    padding-bottom: $spacing-100;
     z-index: 3;
 
     @include respond-to-phone {
-        @include flex-row;
+        @include flex-row-center-justify-between;
     }
 
     >nav {
         @include flex-column-center;
+        gap: $spacing-500;
         transition: 0.5s;
         position: absolute;
-        top: $spacing-200;
+        top: $spacing-500;
         left: -100vw;
         height: 100vh;
         width: 100%;
         background-color: $rose-50;
+
+        a {
+            @include text-preset-1;
+            color: $rose-900;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &.activeLink {
+                text-decoration: underline;
+            }
+        }
 
         &.navOpen {
             left: 0px;

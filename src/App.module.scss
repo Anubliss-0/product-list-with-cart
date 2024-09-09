@@ -11,7 +11,7 @@
     }
 
     @include respond-to-phone {
-        margin: $spacing-300;
+        margin: $spacing-500 $spacing-300;
     }
 }
 

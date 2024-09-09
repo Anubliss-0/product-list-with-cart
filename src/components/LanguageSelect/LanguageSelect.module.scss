@@ -22,6 +22,7 @@
 }
 
 .customSelect {
+    @include text-preset-4-bold;
     appearance: none;
     background-color: transparent;
     border: none;
