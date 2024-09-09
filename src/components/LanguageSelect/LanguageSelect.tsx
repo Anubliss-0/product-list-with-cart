@@ -11,17 +11,17 @@ function LanguageSelect() {
     };
 
     return (
-        <div>
-            <label className={styles.languageSelect}>{t('language')}
-                <select onChange={changeLanguage}>
-                    <option value="en">English</option>
-                    <option value="nl">Nederlands</option>
-                    <option value="es">Español</option>
-                    <option value="de">Deutsch</option>
-                    <option value="fr">Français</option>
-                </select>
+            <label className={styles.languageSelect} aria-label={t('language')}>
+                <div className={styles.customSelectWrapper}>
+                    <select onChange={changeLanguage} className={styles.customSelect}>
+                        <option value="en">English</option>
+                        <option value="nl">Nederlands</option>
+                        <option value="es">Español</option>
+                        <option value="de">Deutsch</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
             </label>
-        </div>
     );
 }
 

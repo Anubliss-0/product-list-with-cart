@@ -7,7 +7,7 @@
 
     @include respond-to-tablet {
         @include flex-column-center;
-        margin: $spacing-500;
+        margin: ($spacing-500 + 1rem) $spacing-500;
     }
 
     @include respond-to-phone {

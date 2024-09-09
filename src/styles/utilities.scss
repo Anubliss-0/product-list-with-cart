@@ -33,6 +33,12 @@
     justify-content: end; 
 }
 
+@mixin flex-column-start-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+}
+
 @mixin flex-row {
     display: flex;
     flex-direction: row;

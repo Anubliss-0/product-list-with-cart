@@ -6,10 +6,30 @@
     @include flex-row-center;
     color: $rose-900;
     gap: $spacing-200;
+}
 
-    >select {
-        border: none;
-        background: none;
+.customSelectWrapper {
+    position: relative;
 
+    &::before {
+        content: "🌐";
+        position: absolute;
+        left: $spacing-200;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+}
+
+.customSelect {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding-left: $spacing-500;
+    position: relative;
+    cursor: pointer;
+
+    option {
+        font-size: 16px;
     }
 }

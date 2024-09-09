@@ -11,6 +11,14 @@
     background: linear-gradient(to bottom, rgba(252, 248, 246, 1) 75%, rgba(252, 248, 246, 0) 100%);
     z-index: 3;
 
+    @include respond-to-tablet {
+        padding: $spacing-200 $spacing-500;
+    }
+
+    @include respond-to-phone {
+        @include flex-column-start-reverse;
+    }
+
     >nav {
         @include text-preset-2;
         @include flex-row;

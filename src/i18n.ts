@@ -9,6 +9,7 @@ i18n
                 translation: {
                     "addToCart": "Add to Cart",
                     "carbonNeutral": "This is a <1>carbon-neutral</1> delivery",
+                    "language": "Language",
                     "starters": {
                         "title": "Starters",
                         "category": {
@@ -59,6 +60,7 @@ i18n
                 "translation": {
                     "addToCart": "Toevoegen",
                     "carbonNeutral": "Dit is een <1>koolstofneutrale</1> levering",
+                    "language": "Taal",
                     "starters": {
                         "title": "Voorgerechten",
                         "category": {
@@ -109,6 +111,7 @@ i18n
                 translation: {
                     "addToCart": "Ajouter au panier",
                     "carbonNeutral": "Ceci est une livraison <1>neutre en carbone</1>",
+                    "language": "Langue",
                     "starters": {
                         "title": "Entrées",
                         "category": {
@@ -159,6 +162,7 @@ i18n
                 translation: {
                     "addToCart": "Añadir al carrito",
                     "carbonNeutral": "Este es un envío <1>neutral en carbono</1>",
+                    "language": "Idioma",
                     "starters": {
                         "title": "Entrantes",
                         "category": {
@@ -209,6 +213,7 @@ i18n
                 translation: {
                     "addToCart": "In den Warenkorb",
                     "carbonNeutral": "Dies ist eine <1>CO₂-neutrale</1> Lieferung",
+                    "language": "Sprache",
                     "starters": {
                         "title": "Vorspeisen",
                         "category": {
