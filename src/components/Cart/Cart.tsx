@@ -2,6 +2,7 @@ import { useTranslation, Trans } from "../../i18n";
 import { flattenAndMapData } from "../../utils/flattenAndMapData";
 import styles from "./Cart.module.scss"
 import emptyCartImage from "../../../public/assets/images/illustration-empty-cart.svg"
+import ConfirmButton from "./ConfirmButton/ConfirmButton";
 
 type CartProps = {
     id: number;
@@ -26,10 +27,6 @@ function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
 
     const removeFromCart = (id: number) => {
         setCart(cart.filter(item => item.id !== id));
-    };
-
-    const showConfirmation = () => {
-        setShowConfirmation(true)
     };
 
     return (
@@ -75,12 +72,12 @@ function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
                                 </Trans>
                             </p>
                         </div>
-                        <button className={styles.confirmButton} onClick={showConfirmation}>Confirm Order</button>
+                        <ConfirmButton setShowConfirmation={setShowConfirmation} />
                     </div>
                 </>
             ) : (
                 <div className={styles.emptyCart}>
-                    <img src={emptyCartImage} alt="REPLACE ME WITH I18N!!" />
+                    <img src={emptyCartImage} alt="" />
                     <span>{t(`emptyCart`)}</span>
                 </div>
             )}
