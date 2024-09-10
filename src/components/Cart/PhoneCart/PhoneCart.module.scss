@@ -1,0 +1,49 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/utilities.scss";
+@import "../../../styles/typography.scss";
+
+.phoneCart {
+    display: none;
+    position: fixed;
+    // Arbitrary number until element fully styled.
+    bottom: -55px;
+    padding: 0 $spacing-300;
+    border-radius: .75rem;
+    background-color: $white;
+    border: 2px solid $red;
+    width: calc(100% - ($spacing-500 * 2));
+    transition: 0.7s;
+
+    @include respond-to-tablet {
+        @include flex-column-center;
+    }
+    
+    @include respond-to-phone {
+        width: 100%;
+    }
+
+    ul {
+        overflow-y: scroll;
+        max-height: 50vh;
+    }
+}
+
+.showPhoneCart {
+    bottom: 0rem;
+}
+
+.lowerCart {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-out;
+}
+
+.openCart {
+    max-height: 80vh; /* Set a value that is larger than the expected height */
+    transition: 0.7s;
+}
+
+.noBorder {
+    transition: 0.7s;
+    border: 2px solid $white;
+}

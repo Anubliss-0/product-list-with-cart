@@ -35,8 +35,7 @@
     }
 
     @include respond-to-tablet {
-        position: relative;
-        width: 100%;
+       display: none;
     }
 }
 

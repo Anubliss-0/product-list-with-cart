@@ -5,6 +5,7 @@ import Cart from "./components/Cart/Cart";
 import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal";
 import Header from "./components/Header/Header";
 import PhoneHeader from "./components/PhoneHeader/PhoneHeader";
+import PhoneCart from "./components/Cart/PhoneCart/PhoneCart";
 
 type CartProps = {
   id: number;
@@ -30,6 +31,11 @@ function App() {
         </div>
         <div className={styles.cart}>
           <Cart
+            cart={cart}
+            setCart={setCart}
+            setShowConfirmation={setShowConfirmation}
+          />
+          <PhoneCart
             cart={cart}
             setCart={setCart}
             setShowConfirmation={setShowConfirmation}
