@@ -17,7 +17,7 @@
     @include respond-to-tablet {
         @include flex-column-center;
     }
-    
+
     @include respond-to-phone {
         width: 100%;
     }
@@ -25,6 +25,115 @@
     ul {
         overflow-y: scroll;
         max-height: 50vh;
+    }
+
+    hr {
+        border: 1px solid $rose-100;
+        margin: $spacing-200 0;
+    }
+
+    hr:last-of-type {
+        margin: $spacing-300 0;
+    }
+}
+
+.upperCart {
+    @include flex-row-center-justify-between;
+    width: 100%;
+    
+    >h2 {
+        @include text-preset-2;
+        color: $red;
+        position: sticky;
+        top: 0%;
+        width: 100%;
+        background-color: $white;
+        padding-top: $spacing-300;
+    }
+}
+
+.cartItem {
+    @include flex-row-center-justify-between;
+    @include text-preset-4-bold;
+}
+
+.left {
+    @include flex-column-start;
+
+    >p {
+        margin: 0 0 .5rem 0;
+        color: $rose-900;
+    }
+
+    div {
+        @include flex-row-center;
+        gap: $spacing-100;
+
+
+        span:nth-of-type(1) {
+            color: $red;
+            margin-right: 9px;
+        }
+
+        span:nth-of-type(2) {
+            @include text-preset-4;
+            color: $rose-500;
+        }
+
+        span:nth-of-type(3) {
+            color: $rose-500;
+        }
+    }
+}
+
+.removeButton {
+    @include flex-row-center;
+    background: none;
+    border: 0.0938rem solid $rose-400;
+    fill: $rose-400;
+    height: 1.0938rem;
+    width: 1.0938rem;
+    padding: 0rem;
+    border-radius: 50%;
+
+    &:hover {
+        fill: $rose-900;
+        border: 0.0938rem solid $rose-900;
+    }
+}
+
+.total {
+    @include flex-row-center-justify-between;
+    margin-bottom: $spacing-300;
+
+    span {
+        @include text-preset-4;
+        color: $rose-900;
+    }
+
+    h4 {
+        @include text-preset-2;
+    }
+}
+
+.cartEnd {
+    position: sticky;
+    bottom: 0;
+    margin-top: auto;
+    background-color: $white;
+    padding-bottom: $spacing-300
+}
+
+.carbonInfo {
+    @include flex-row-center;
+    background-color: $rose-50;
+    margin-bottom: $spacing-300;
+    width: 100%;
+    padding: 0 $spacing-200;
+    border-radius: 8px;
+
+    svg {
+        margin-right: $spacing-100;
     }
 }
 
@@ -36,10 +145,12 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.7s ease-out;
+    width: 100%;
 }
 
 .openCart {
-    max-height: 80vh; /* Set a value that is larger than the expected height */
+    max-height: 80vh;
+    /* Set a value that is larger than the expected height */
     transition: 0.7s;
 }
 
