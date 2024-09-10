@@ -39,11 +39,25 @@ function ConfirmButton({ setShowConfirmation }: ConfirmButtonProps) {
     };
 
     return (
-        <button onClick={handleClick} className={styles.confirmButton}>
+        <button
+            onClick={handleClick}
+            className={styles.confirmButton}
+            aria-label={isConfirming ? `Cancel order, ${counter} seconds remaining` : t("confirmOrder")}
+            aria-live="polite"
+            aria-busy={isConfirming}
+        >
             <span className={styles.buttonText}>
                 {isConfirming ? `Cancel (${counter}s)` : `${t("confirmOrder")}`}
             </span>
-            {isConfirming && <div className={styles.progressBar}></div>}
+            {isConfirming && (
+                <div
+                    className={styles.progressBar}
+                    role="progressbar"
+                    aria-valuemin={0}
+                    aria-valuemax={7}
+                    aria-valuenow={7 - counter}
+                ></div>
+            )}
         </button>
     );
 }
