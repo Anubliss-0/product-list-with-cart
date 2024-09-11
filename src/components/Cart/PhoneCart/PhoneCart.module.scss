@@ -22,17 +22,6 @@
         width: 100%;
     }
 
-    ul {
-        overflow-y: scroll;
-        max-height: 50vh;
-        padding: $spacing-100;
-    }
-
-    hr {
-        border: 1px solid $rose-100;
-        margin: $spacing-200 0;
-    }
-
     hr:last-of-type {
         margin: $spacing-300 0;
     }
@@ -59,40 +48,6 @@
 
     .rotateChevron {
         transform: scale(2) rotate(0);
-    }
-}
-
-.cartItem {
-    @include flex-row-center-justify-between;
-    @include text-preset-4-bold;
-}
-
-.left {
-    @include flex-column-start;
-
-    >p {
-        margin: 0 0 .5rem 0;
-        color: $rose-900;
-    }
-
-    div {
-        @include flex-row-center;
-        gap: $spacing-100;
-
-
-        span:nth-of-type(1) {
-            color: $red;
-            margin-right: 9px;
-        }
-
-        span:nth-of-type(2) {
-            @include text-preset-4;
-            color: $rose-500;
-        }
-
-        span:nth-of-type(3) {
-            color: $rose-500;
-        }
     }
 }
 

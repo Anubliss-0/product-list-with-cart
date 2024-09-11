@@ -21,72 +21,8 @@
         padding-top: $spacing-300;
     }
 
-    >ul {
-        padding: 0%;
-    }
-
-    hr {
-        border: 1px solid $rose-100;
-        margin: $spacing-200 0;
-    }
-
-    hr:last-of-type {
-        margin: $spacing-300 0;
-    }
-
     @include respond-to-tablet {
        display: none;
-    }
-}
-
-.cartItem {
-    @include flex-row-center-justify-between;
-    @include text-preset-4-bold;
-
-}
-
-.left {
-    @include flex-column-start;
-
-    >p {
-        margin: 0 0 .5rem 0;
-        color: $rose-900;
-    }
-
-    div {
-        @include flex-row-center;
-        gap: $spacing-100;
-
-
-        span:nth-of-type(1) {
-            color: $red;
-            margin-right: 9px;
-        }
-
-        span:nth-of-type(2) {
-            @include text-preset-4;
-            color: $rose-500;
-        }
-
-        span:nth-of-type(3) {
-            color: $rose-500;
-        }
-    }
-}
-
-.removeButton {
-    @include flex-row-center;
-    background: none;
-    border: 0.0938rem solid $rose-400;
-    fill: $rose-400;
-    height: 1.0938rem;
-    width: 1.0938rem;
-    padding: 0rem;
-    border-radius: 50%;
-
-    &:hover {
-        fill: $rose-900;
-        border: 0.0938rem solid $rose-900;
     }
 }
 
