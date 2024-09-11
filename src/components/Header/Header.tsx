@@ -22,7 +22,7 @@ function Header() {
           Mains
         </NavLink>
         <NavLink
-          to="deserts"
+          to="desserts"
           className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
         >
           {t('desserts.title')}

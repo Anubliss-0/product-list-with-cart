@@ -2,10 +2,10 @@ import ProductCard from '../components/ProductCard/ProductCard';
 import data from '../data.json'
 import styles from "./ProductList.module.scss"
 
-function Deserts() {
+function Desserts() {
   return (
     <section>
-      <h1 className={styles.title}>Deserts</h1>
+      <h1 className={styles.title}>Desserts</h1>
       <div className={styles.itemList}>
         {data.desserts.map((foodItem) => (
           <ProductCard key={foodItem.id} foodItem={foodItem} section='desserts' />
@@ -15,4 +15,4 @@ function Deserts() {
   )
 }
 
-export default Deserts
+export default Desserts

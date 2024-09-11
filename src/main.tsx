@@ -8,7 +8,7 @@ import ErrorPage from './error-page';
 import App from './App'
 import Starters from './routes/Starters';
 import Mains from './routes/Mains';
-import Deserts from './routes/Deserts';
+import Desserts from './routes/Desserts';
 import './index.scss'
 
 const router = createBrowserRouter([
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
         element: <Mains />
       },
       {
-        path: "deserts",
-        element: <Deserts />
+        path: "desserts",
+        element: <Desserts />
       }
     ]
   },
