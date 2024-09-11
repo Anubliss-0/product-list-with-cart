@@ -5,9 +5,10 @@ import styles from "./ConfirmButton.module.scss";
 
 type ConfirmButtonProps = {
     setShowConfirmation: React.Dispatch<React.SetStateAction<boolean>>;
+    setShowCart: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-function ConfirmButton({ setShowConfirmation }: ConfirmButtonProps) {
+function ConfirmButton({ setShowConfirmation, setShowCart }: ConfirmButtonProps) {
     const { t } = useTranslation();
     const [isConfirming, setIsConfirming] = useState(false);
     const [counter, setCounter] = useState(7);
@@ -20,6 +21,7 @@ function ConfirmButton({ setShowConfirmation }: ConfirmButtonProps) {
                 clearInterval(timer);
                 setShowConfirmation(true);
                 setIsConfirming(false);
+                setShowCart(false)
             });
         }
 

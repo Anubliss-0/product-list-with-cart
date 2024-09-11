@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { useTranslation, Trans } from "../../../i18n";
 import { flattenAndMapData } from "../../../utils/flattenAndMapData";
+import { Icon } from '@iconify/react';
 import styles from "./PhoneCart.module.scss"
 import ConfirmButton from "../ConfirmButton/ConfirmButton";
-import { useState } from "react";
 
 type CartProps = {
     id: number;
@@ -32,11 +33,11 @@ function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
 
     return (
         <section className={`${styles.phoneCart} ${cart.length > 0 ? styles.showPhoneCart : ''} ${showCart ? styles.noBorder : ""}`}>
-            <div className={styles.upperCart}>
+            <div className={styles.upperCart} onClick={() => setShowCart(prevState => !prevState)}>
                 <h2>{`Your cart (${cart.length})`}</h2>
-                <button onClick={() => setShowCart(prevState => !prevState)}>Toggle Cart</button>
+                <Icon icon="ci:chevron-down" className={showCart ? styles.rotateChevron : ""} />
             </div>
-            <div className={`${styles.lowerCart} ${showCart ? styles.openCart : ""}`}>
+            <div className={`${styles.lowerCart} ${(showCart && cart.length > 0) ? styles.openCart : ""}`}>
                 <ul aria-live="polite">
                     {cart.map((item) => {
                         const product = dataMap.get(item.id);
@@ -75,7 +76,10 @@ function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
                             </Trans>
                         </p>
                     </div>
-                    <ConfirmButton setShowConfirmation={setShowConfirmation} />
+                    <ConfirmButton
+                        setShowConfirmation={setShowConfirmation}
+                        setShowCart={setShowCart}
+                    />
                 </div>
             </div>
         </section>
