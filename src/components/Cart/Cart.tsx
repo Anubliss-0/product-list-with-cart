@@ -31,7 +31,7 @@ function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
 
     return (
         <section className={styles.cartItems}>
-            <h2>{`Your cart (${cart.length})`}</h2>
+            <h2>{`Your cart (${cart.reduce((acc, item) => acc + item.quantity, 0)})`}</h2>
             {cart.length > 0 ? (
                 <>
                     <ul aria-live="polite">

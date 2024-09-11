@@ -34,7 +34,7 @@ function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
     return (
         <section className={`${styles.phoneCart} ${cart.length > 0 ? styles.showPhoneCart : ''} ${showCart ? styles.noBorder : ""}`}>
             <div className={styles.upperCart} onClick={() => setShowCart(prevState => !prevState)}>
-                <h2>{`Your cart (${cart.length})`}</h2>
+                <h2>{`Your cart (${cart.reduce((acc, item) => acc + item.quantity, 0)})`}</h2>
                 <Icon icon="ci:chevron-down" className={showCart ? styles.rotateChevron : ""} />
             </div>
             <div className={`${styles.lowerCart} ${(showCart && cart.length > 0) ? styles.openCart : ""}`}>
