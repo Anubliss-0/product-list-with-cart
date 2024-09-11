@@ -52,7 +52,7 @@ function ConfirmButton({ setShowConfirmation, setShowCart }: ConfirmButtonProps)
             aria-busy={isConfirming}
         >
             <span className={styles.buttonText}>
-                {isConfirming ? `Cancel (${counter}s)` : `${t("confirmOrder")}`}
+                {isConfirming ? `${t("cancel")} (${counter})` : `${t("confirmOrder")}`}
             </span>
             {isConfirming && (
                 <div

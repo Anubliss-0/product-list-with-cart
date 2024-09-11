@@ -11,6 +11,10 @@ i18n
                     "carbonNeutral": "This is a <1>carbon-neutral</1> delivery",
                     "language": "Language",
                     "confirmOrder": "Confirm Order",
+                    "yourCart": "Your Cart",
+                    "emptyCart": "Your added items will appear here",
+                    "orderTotal": "Order Total",
+                    "cancel": "Cancel",
                     "starters": {
                         "title": "Starters",
                         "category": {
@@ -54,6 +58,7 @@ i18n
                     "ariaLabels": {
                         "decreaseQuantity": "Decrease quantity",
                         "increaseQuantity": "Increase quantity",
+                        "removeFromCart": "Remove From cart"
                     }
                 }
             },
@@ -63,6 +68,10 @@ i18n
                     "carbonNeutral": "Dit is een <1>koolstofneutrale</1> levering",
                     "language": "Taal",
                     "confirmOrder": "Bevestig bestelling",
+                    "yourCart": "Je winkelwagen",
+                    "emptyCart": "Je toegevoegde items verschijnen hier",
+                    "orderTotal": "Totaalbedrag van bestelling",
+                    "cancel": "Annuleren",
                     "starters": {
                         "title": "Voorgerechten",
                         "category": {
@@ -105,7 +114,8 @@ i18n
                     },
                     "ariaLabels": {
                         "decreaseQuantity": "Hoeveelheid verminderen",
-                        "increaseQuantity": "Hoeveelheid verhogen"
+                        "increaseQuantity": "Hoeveelheid verhogen",
+                        "removeFromCart": "Verwijderen uit winkelwagen"
                     }
                 }
             },
@@ -115,6 +125,10 @@ i18n
                     "carbonNeutral": "Ceci est une livraison <1>neutre en carbone</1>",
                     "language": "Langue",
                     "confirmOrder": "Confirmer la commande",
+                    "yourCart": "Votre panie",
+                    "emptyCart": "Vos articles ajoutés apparaîtront ici",
+                    "orderTotal": "Total de la commande",
+                    "cancel": "Annuler",
                     "starters": {
                         "title": "Entrées",
                         "category": {
@@ -157,7 +171,8 @@ i18n
                     },
                     "ariaLabels": {
                         "decreaseQuantity": "Diminuer la quantité",
-                        "increaseQuantity": "Augmenter la quantité"
+                        "increaseQuantity": "Augmenter la quantité",
+                        "removeFromCart": "Retirer du panier"
                     }
                 }
             },
@@ -167,6 +182,10 @@ i18n
                     "carbonNeutral": "Este es un envío <1>neutral en carbono</1>",
                     "language": "Idioma",
                     "confirmOrder": "Confirmar pedido",
+                    "yourCart": "Tu carrito",
+                    "emptyCart": "Tus artículos añadidos aparecerán aquí",
+                    "orderTotal": "Total del pedido",
+                    "cancel": "Cancelar",
                     "starters": {
                         "title": "Entrantes",
                         "category": {
@@ -209,7 +228,8 @@ i18n
                     },
                     "ariaLabels": {
                         "decreaseQuantity": "Disminuir cantidad",
-                        "increaseQuantity": "Aumentar cantidad"
+                        "increaseQuantity": "Aumentar cantidad",
+                        "removeFromCart": "Quitar del carrito"
                     }
                 }
             },
@@ -219,6 +239,10 @@ i18n
                     "carbonNeutral": "Dies ist eine <1>CO₂-neutrale</1> Lieferung",
                     "language": "Sprache",
                     "confirmOrder": "Bestellung bestätigen",
+                    "yourCart": "Dein Warenkorb",
+                    "emptyCart": "Deine hinzugefügten Artikel erscheinen hier",
+                    "orderTotal": "Bestellsumme",
+                    "cancel": "Abbrechen",
                     "starters": {
                         "title": "Vorspeisen",
                         "category": {
@@ -261,7 +285,8 @@ i18n
                     },
                     "ariaLabels": {
                         "decreaseQuantity": "Menge verringern",
-                        "increaseQuantity": "Menge erhöhen"
+                        "increaseQuantity": "Menge erhöhen",
+                        "removeFromCart": "Aus dem Warenkorb entfernen"
                     }
                 }
             },
