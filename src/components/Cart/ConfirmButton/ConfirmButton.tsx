@@ -20,13 +20,12 @@ function ConfirmButton({ setShowConfirmation, setShowCart }: ConfirmButtonProps)
             timer = startTimer(counter, setCounter, () => {
                 clearInterval(timer);
                 setTimeout(() => {
-                    setShowConfirmation(true); // This will happen after render
+                    setShowConfirmation(true);
+                    if (setShowCart) {
+                        setShowCart(false);
+                    }
                 }, 0);
                 setIsConfirming(false);
-
-                if (setShowCart) {
-                    setShowCart(false);
-                }
             });
         }
 

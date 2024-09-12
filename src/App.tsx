@@ -38,7 +38,7 @@ function App() {
       default:
         document.title = 'My App';
     }
-  }, [location]);
+  }, [location, t]);
 
   return (
     <>
