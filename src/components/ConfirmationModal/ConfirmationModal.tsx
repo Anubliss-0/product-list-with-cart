@@ -42,30 +42,28 @@ function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmatio
                     <span>{t("enjoyYourFood")}</span>
                 </div>
                 <ul aria-live="polite" className={styles.confirmMiddle}>
-                    {cart.map((item) => {
+                    {cart.map((item, index) => {
                         const product = dataMap.get(item.id);
-                        return (
-                            <>
-                                <li key={item.id}>
-                                    <div className={styles.itemLeft}>
-                                        <img src={product?.image.thumbnail} alt={`${t(`${product?.section}.items.${product?.name}`)} ${t('ariaLabels.thumbnail')}`} />
-                                        <div>
-                                            <span>{t(`${product?.section}.items.${product?.name}`)}</span>
-                                            <div className={styles.itemLeftEnd}>
-                                                <span>{item.quantity}X </span>
-                                                <span>@ €{(product?.price ?? 0).toFixed(2)}</span>
-                                            </div>
+                        return [
+                            <li key={`${item.id}-${index}`}>
+                                <div className={styles.itemLeft}>
+                                    <img src={product?.image.thumbnail} alt={`${t(`${product?.section}.items.${product?.name}`)} ${t('ariaLabels.thumbnail')}`} />
+                                    <div>
+                                        <span>{t(`${product?.section}.items.${product?.name}`)}</span>
+                                        <div className={styles.itemLeftEnd}>
+                                            <span>{item.quantity}X </span>
+                                            <span>@ €{(product?.price ?? 0).toFixed(2)}</span>
                                         </div>
                                     </div>
-                                    <div className={styles.itemRight}>
-                                        <span>€{((product?.price ?? 0) * item.quantity).toFixed(2)}</span>
-                                    </div>
-                                </li>
-                                <hr />
-                            </>
-                        );
+                                </div>
+                                <div className={styles.itemRight}>
+                                    <span>€{((product?.price ?? 0) * item.quantity).toFixed(2)}</span>
+                                </div>
+                            </li>,
+                            <hr key={`hr-${index}`} />
+                        ];
                     })}
-                    <li className={styles.listTotal}>
+                    <li key={"total"} className={styles.listTotal}>
                         <span>{t("orderTotal")}</span>
                         <span>€{total.toFixed(2)}</span>
                     </li>

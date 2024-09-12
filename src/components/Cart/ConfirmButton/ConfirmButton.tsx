@@ -19,9 +19,11 @@ function ConfirmButton({ setShowConfirmation, setShowCart }: ConfirmButtonProps)
         if (isConfirming) {
             timer = startTimer(counter, setCounter, () => {
                 clearInterval(timer);
-                setShowConfirmation(true);
+                setTimeout(() => {
+                    setShowConfirmation(true); // This will happen after render
+                }, 0);
                 setIsConfirming(false);
-                
+
                 if (setShowCart) {
                     setShowCart(false);
                 }
@@ -31,7 +33,7 @@ function ConfirmButton({ setShowConfirmation, setShowCart }: ConfirmButtonProps)
         return () => {
             clearInterval(timer);
         };
-    }, [isConfirming, setShowConfirmation, counter]);
+    }, [isConfirming, setShowConfirmation, counter, setShowCart]);
 
     const handleClick = () => {
         if (isConfirming) {
