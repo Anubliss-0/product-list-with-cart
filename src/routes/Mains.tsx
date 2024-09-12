@@ -10,7 +10,7 @@ function Mains() {
     <>
       <h1 className={styles.title}>{t("mains.title")}</h1>
       <div className={styles.itemList}>
-        {data.starters.map((foodItem) => (
+        {data.mains.map((foodItem) => (
           <ProductCard key={foodItem.id} foodItem={foodItem} section='mains'/>
         ))}
       </div>

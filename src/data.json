@@ -170,5 +170,67 @@
             "category": "pannaCotta",
             "price": 6.50
         }
+    ],
+    "mains": [
+        {
+            "id": 15,
+            "image": {
+                "thumbnail": "https://picsum.photos/200/300?random=11",
+                "mobile": "https://picsum.photos/327/212?random=11",
+                "tablet": "https://picsum.photos/213/213?random=11",
+                "desktop": "https://picsum.photos/250/240?random=11"
+            },
+            "name": "grilledSteak",
+            "category": "meat",
+            "price": 15.50
+        },
+        {
+            "id": 16,
+            "image": {
+                "thumbnail": "https://picsum.photos/200/300?random=12",
+                "mobile": "https://picsum.photos/327/212?random=12",
+                "tablet": "https://picsum.photos/213/213?random=12",
+                "desktop": "https://picsum.photos/250/240?random=12"
+            },
+            "name": "chickenAlfredo",
+            "category": "pasta",
+            "price": 13.00
+        },
+        {
+            "id": 17,
+            "image": {
+                "thumbnail": "https://picsum.photos/200/300?random=13",
+                "mobile": "https://picsum.photos/327/212?random=13",
+                "tablet": "https://picsum.photos/213/213?random=13",
+                "desktop": "https://picsum.photos/250/240?random=13"
+            },
+            "name": "vegetableStirFry",
+            "category": "vegetarian",
+            "price": 12.00
+        },
+        {
+            "id": 18,
+            "image": {
+                "thumbnail": "https://picsum.photos/200/300?random=14",
+                "mobile": "https://picsum.photos/327/212?random=14",
+                "tablet": "https://picsum.photos/213/213?random=14",
+                "desktop": "https://picsum.photos/250/240?random=14"
+            },
+            "name": "salmonFillet",
+            "category": "seafood",
+            "price": 16.50
+        },
+        {
+            "id": 19,
+            "image": {
+                "thumbnail": "https://picsum.photos/200/300?random=15",
+                "mobile": "https://picsum.photos/327/212?random=15",
+                "tablet": "https://picsum.photos/213/213?random=15",
+                "desktop": "https://picsum.photos/250/240?random=15"
+            },
+            "name": "lambChops",
+            "category": "meat",
+            "price": 18.00
+        }
     ]
 }

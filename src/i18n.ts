@@ -30,6 +30,22 @@ i18n
                             "miniQuiches": "Mini Quiches"
                         }
                     },
+                    "mains": {
+                        "title": "Mains",
+                        "category": {
+                            "meat": "Meat",
+                            "pasta": "Pasta",
+                            "vegetarian": "Vegetarian",
+                            "seafood": "Seafood"
+                        },
+                        "items": {
+                            "grilledSteak": "Grilled Steak",
+                            "chickenAlfredo": "Chicken Alfredo",
+                            "vegetableStirFry": "Vegetable Stir Fry",
+                            "salmonFillet": "Salmon Fillet",
+                            "lambChops": "Lamb Chops"
+                        }
+                    },
                     "desserts": {
                         "title": "Desserts",
                         "category": {
@@ -85,6 +101,22 @@ i18n
                             "garlicBreadsticks": "Knoflook Broodstengels",
                             "capreseSalad": "Caprese Salade",
                             "miniQuiches": "Mini Quiches"
+                        }
+                    },
+                    "mains": {
+                        "title": "Hoofdgerechten",
+                        "category": {
+                            "meat": "Vlees",
+                            "pasta": "Pasta",
+                            "vegetarian": "Vegetarisch",
+                            "seafood": "Zeevruchten"
+                        },
+                        "items": {
+                            "grilledSteak": "Gegrilde Steak",
+                            "chickenAlfredo": "Kip Alfredo",
+                            "vegetableStirFry": "Groente Roerbak",
+                            "salmonFillet": "Zalmfilet",
+                            "lambChops": "Lamskoteletten"
                         }
                     },
                     "desserts": {
@@ -144,6 +176,22 @@ i18n
                             "miniQuiches": "Mini quiches"
                         }
                     },
+                    "mains": {
+                        "title": "Plats Principaux",
+                        "category": {
+                            "meat": "Viande",
+                            "pasta": "Pâtes",
+                            "vegetarian": "Végétarien",
+                            "seafood": "Fruits de Mer"
+                        },
+                        "items": {
+                            "grilledSteak": "Steak Grillé",
+                            "chickenAlfredo": "Poulet Alfredo",
+                            "vegetableStirFry": "Sauté de Légumes",
+                            "salmonFillet": "Filet de Saumon",
+                            "lambChops": "Côtelettes d'Agneau"
+                        }
+                    },
                     "desserts": {
                         "title": "Desserts",
                         "category": {
@@ -201,6 +249,22 @@ i18n
                             "miniQuiches": "Mini quiches"
                         }
                     },
+                    "mains": {
+                        "title": "Platos Principales",
+                        "category": {
+                            "meat": "Carne",
+                            "pasta": "Pasta",
+                            "vegetarian": "Vegetariano",
+                            "seafood": "Mariscos"
+                        },
+                        "items": {
+                            "grilledSteak": "Filete a la Parrilla",
+                            "chickenAlfredo": "Pollo Alfredo",
+                            "vegetableStirFry": "Salteado de Verduras",
+                            "salmonFillet": "Filete de Salmón",
+                            "lambChops": "Chuletas de Cordero"
+                        }
+                    },
                     "desserts": {
                         "title": "Postres",
                         "category": {
@@ -256,6 +320,22 @@ i18n
                             "garlicBreadsticks": "Knoblauchbrotstangen",
                             "capreseSalad": "Caprese Salat",
                             "miniQuiches": "Mini-Quiches"
+                        }
+                    },
+                    "mains": {
+                        "title": "Hauptgerichte",
+                        "category": {
+                            "meat": "Fleisch",
+                            "pasta": "Nudeln",
+                            "vegetarian": "Vegetarisch",
+                            "seafood": "Meeresfrüchte"
+                        },
+                        "items": {
+                            "grilledSteak": "Gegrilltes Steak",
+                            "chickenAlfredo": "Hähnchen Alfredo",
+                            "vegetableStirFry": "Gemüsepfanne",
+                            "salmonFillet": "Lachsfilet",
+                            "lambChops": "Lammkoteletts"
                         }
                     },
                     "desserts": {
