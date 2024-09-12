@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Hamburger from 'hamburger-react';
-import { useTranslation } from "../../i18n";
-import LanguageSelect from "../../components/LanguageSelect/LanguageSelect";
+import { useTranslation } from "../../../i18n";
+import LanguageSelect from "../LanguageSelect/LanguageSelect";
 import styles from "./PhoneHeader.module.scss";
 
-function Header() {
+function PhoneHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
 
@@ -40,4 +40,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default PhoneHeader;

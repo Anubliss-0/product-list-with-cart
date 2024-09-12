@@ -1,4 +1,4 @@
-import { useTranslation } from "../../i18n";
+import { useTranslation } from "../../../i18n";
 import styles from "./CartItemsList.module.scss"
 
 type CartItemsListProps = {

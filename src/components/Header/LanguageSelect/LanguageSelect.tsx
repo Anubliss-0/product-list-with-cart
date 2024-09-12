@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import { i18n, useTranslation } from '../../i18n';
+import { i18n, useTranslation } from '../../../i18n';
 import styles from "./LanguageSelect.module.scss";
 
 function LanguageSelect() {

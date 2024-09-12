@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-import { useTranslation } from "../../i18n";
-import LanguageSelect from "../../components/LanguageSelect/LanguageSelect";
-import styles from "./Header.module.scss";
+import { useTranslation } from "../../../i18n";
+import LanguageSelect from "../LanguageSelect/LanguageSelect"
+import styles from "./DesktopHeader.module.scss";
 
-function Header() {
+function DesktopHeader() {
     const { t } = useTranslation();
 
     return (
@@ -33,4 +33,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default DesktopHeader;

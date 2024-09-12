@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Outlet, useOutletContext } from "react-router-dom";
 import styles from "./App.module.scss"
-import Cart from "./components/Cart/Cart";
+import DesktopCart from "./components/Cart/DesktopCart/DesktopCart";
 import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal";
-import Header from "./components/Header/Header";
-import PhoneHeader from "./components/PhoneHeader/PhoneHeader";
+import DesktopHeader from "./components/Header/DesktopHeader/DesktopHeader";
+import PhoneHeader from "./components/Header/PhoneHeader/PhoneHeader";
 import PhoneCart from "./components/Cart/PhoneCart/PhoneCart";
 
 type CartProps = {
@@ -23,14 +23,14 @@ function App() {
 
   return (
     <>
-      < Header />
+      < DesktopHeader />
       < PhoneHeader />
       <main className={styles.container}>
         <div className={styles.products}>
           <Outlet context={{ cart, setCart }} />
         </div>
         <div className={styles.cart}>
-          <Cart
+          <DesktopCart
             cart={cart}
             setCart={setCart}
             setShowConfirmation={setShowConfirmation}

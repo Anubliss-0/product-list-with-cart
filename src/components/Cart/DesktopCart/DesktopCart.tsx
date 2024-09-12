@@ -1,9 +1,9 @@
-import { useTranslation, Trans } from "../../i18n";
-import { flattenAndMapData } from "../../utils/flattenAndMapData";
-import styles from "./Cart.module.scss";
-import emptyCartImage from "../../../public/assets/images/illustration-empty-cart.svg";
-import ConfirmButton from "./ConfirmButton/ConfirmButton";
-import CartItemsList from "./CartItemsList";
+import { useTranslation, Trans } from "../../../i18n";
+import { flattenAndMapData } from "../../../utils/flattenAndMapData";
+import styles from "./DesktopCart.module.scss";
+import emptyCartImage from "../../../../public/assets/images/illustration-empty-cart.svg";
+import ConfirmButton from "../ConfirmButton/ConfirmButton";
+import CartItemsList from "../CartItemsList/CartItemsList";
 
 type CartProps = {
     id: number;
@@ -18,7 +18,7 @@ type CartComponentProps = {
 
 const dataMap = flattenAndMapData();
 
-function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
+function DesktopCart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
     const { t } = useTranslation();
 
     const total = cart.reduce((sum, item) => {
@@ -66,4 +66,4 @@ function Cart({ cart, setCart, setShowConfirmation }: CartComponentProps) {
     );
 }
 
-export default Cart;
+export default DesktopCart;

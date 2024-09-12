@@ -4,7 +4,7 @@ import { flattenAndMapData } from "../../../utils/flattenAndMapData";
 import { Icon } from '@iconify/react';
 import styles from "./PhoneCart.module.scss"
 import ConfirmButton from "../ConfirmButton/ConfirmButton";
-import CartItemsList from "../CartItemsList";
+import CartItemsList from "../CartItemsList/CartItemsList";
 
 type CartProps = {
     id: number;
