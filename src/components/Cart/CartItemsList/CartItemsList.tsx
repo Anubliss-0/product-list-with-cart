@@ -32,7 +32,7 @@ const CartItemsList = ({ cart, removeFromCart, dataMap }: CartItemsListProps) =>
                                 className={styles.removeButton}
                                 onClick={() => removeFromCart(item.id)}
                                 aria-label={`${t('ariaLabels.removeFromCart')} ${t(`${product?.section}.items.${product?.name}`)}`}>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
                                     <path d="M8.375 9.375 5 6 1.625 9.375l-1-1L4 5 .625 1.625l1-1L5 4 8.375.625l1 1L6 5l3.375 3.375-1 1Z" />
                                 </svg>
                             </button>
