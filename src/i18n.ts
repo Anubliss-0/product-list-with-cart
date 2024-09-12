@@ -7,6 +7,7 @@ i18n
         resources: {
             en: {
                 translation: {
+                    "menu": "Menu",
                     "addToCart": "Add to Cart",
                     "carbonNeutral": "This is a <1>carbon-neutral</1> delivery",
                     "language": "Language",
@@ -83,7 +84,8 @@ i18n
                 }
             },
             nl: {
-                "translation": {
+                translation: {
+                    "menu": "Menu",
                     "addToCart": "Toevoegen",
                     "carbonNeutral": "Dit is een <1>koolstofneutrale</1> levering",
                     "language": "Taal",
@@ -161,6 +163,7 @@ i18n
             },
             fr: {
                 translation: {
+                    "menu": "Menu",
                     "addToCart": "Ajouter au panier",
                     "carbonNeutral": "Ceci est une livraison <1>neutre en carbone</1>",
                     "language": "Langue",
@@ -238,6 +241,7 @@ i18n
             },
             es: {
                 translation: {
+                    "menu": "Menú",
                     "addToCart": "Añadir al carrito",
                     "carbonNeutral": "Este es un envío <1>neutral en carbono</1>",
                     "language": "Idioma",
@@ -315,6 +319,7 @@ i18n
             },
             de: {
                 translation: {
+                    "menu": "Menü",
                     "addToCart": "In den Warenkorb",
                     "carbonNeutral": "Dies ist eine <1>CO₂-neutrale</1> Lieferung",
                     "language": "Sprache",

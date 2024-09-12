@@ -28,7 +28,7 @@ function PhoneHeader() {
           {t("mains.title")}
         </NavLink>
         <NavLink
-          to="deserts"
+          to="desserts"
           className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
