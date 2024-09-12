@@ -15,6 +15,9 @@ i18n
                     "emptyCart": "Your added items will appear here",
                     "orderTotal": "Order Total",
                     "cancel": "Cancel",
+                    "orderConfirmed": "Order Confirmed",
+                    "enjoyYourFood": "We hope you enjoy your food!",
+                    "newOrder": "Start New Order",
                     "starters": {
                         "title": "Starters",
                         "category": {
@@ -74,7 +77,8 @@ i18n
                     "ariaLabels": {
                         "decreaseQuantity": "Decrease quantity",
                         "increaseQuantity": "Increase quantity",
-                        "removeFromCart": "Remove From cart"
+                        "removeFromCart": "Remove From cart",
+                        "thumbnail": "Thumbnail"
                     }
                 }
             },
@@ -88,6 +92,9 @@ i18n
                     "emptyCart": "Je toegevoegde items verschijnen hier",
                     "orderTotal": "Totaalbedrag van bestelling",
                     "cancel": "Annuleren",
+                    "orderConfirmed": "Bestelling Bevestigd",
+                    "enjoyYourFood": "We hopen dat je van je eten geniet!",
+                    "newOrder": "Begin Nieuwe Bestelling",
                     "starters": {
                         "title": "Voorgerechten",
                         "category": {
@@ -147,7 +154,8 @@ i18n
                     "ariaLabels": {
                         "decreaseQuantity": "Hoeveelheid verminderen",
                         "increaseQuantity": "Hoeveelheid verhogen",
-                        "removeFromCart": "Verwijderen uit winkelwagen"
+                        "removeFromCart": "Verwijderen uit winkelwagen",
+                        "thumbnail": "Miniatuur"
                     }
                 }
             },
@@ -161,6 +169,9 @@ i18n
                     "emptyCart": "Vos articles ajoutés apparaîtront ici",
                     "orderTotal": "Total de la commande",
                     "cancel": "Annuler",
+                    "orderConfirmed": "Commande Confirmée",
+                    "enjoyYourFood": "Nous espérons que vous apprécierez votre repas!",
+                    "newOrder": "Commencer une Nouvelle Commande",
                     "starters": {
                         "title": "Entrées",
                         "category": {
@@ -220,7 +231,8 @@ i18n
                     "ariaLabels": {
                         "decreaseQuantity": "Diminuer la quantité",
                         "increaseQuantity": "Augmenter la quantité",
-                        "removeFromCart": "Retirer du panier"
+                        "removeFromCart": "Retirer du panier",
+                        "thumbnail": "Vignette"
                     }
                 }
             },
@@ -234,6 +246,9 @@ i18n
                     "emptyCart": "Tus artículos añadidos aparecerán aquí",
                     "orderTotal": "Total del pedido",
                     "cancel": "Cancelar",
+                    "orderConfirmed": "Pedido Confirmado",
+                    "enjoyYourFood": "¡Esperamos que disfrutes tu comida!",
+                    "newOrder": "Iniciar Nuevo Pedido",
                     "starters": {
                         "title": "Entrantes",
                         "category": {
@@ -293,7 +308,8 @@ i18n
                     "ariaLabels": {
                         "decreaseQuantity": "Disminuir cantidad",
                         "increaseQuantity": "Aumentar cantidad",
-                        "removeFromCart": "Quitar del carrito"
+                        "removeFromCart": "Quitar del carrito",
+                        "thumbnail": "Miniatura"
                     }
                 }
             },
@@ -307,6 +323,9 @@ i18n
                     "emptyCart": "Deine hinzugefügten Artikel erscheinen hier",
                     "orderTotal": "Bestellsumme",
                     "cancel": "Abbrechen",
+                    "orderConfirmed": "Bestellung Bestätigt",
+                    "enjoyYourFood": "Wir hoffen, dass Sie Ihr Essen genießen!",
+                    "newOrder": "Neue Bestellung Starten",
                     "starters": {
                         "title": "Vorspeisen",
                         "category": {
@@ -366,7 +385,8 @@ i18n
                     "ariaLabels": {
                         "decreaseQuantity": "Menge verringern",
                         "increaseQuantity": "Menge erhöhen",
-                        "removeFromCart": "Aus dem Warenkorb entfernen"
+                        "removeFromCart": "Aus dem Warenkorb entfernen",
+                        "thumbnail": "Vorschaubild"
                     }
                 }
             },

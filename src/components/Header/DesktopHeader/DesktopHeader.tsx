@@ -19,7 +19,7 @@ function DesktopHeader() {
           to="mains"
           className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
         >
-          Mains
+          {t("mains.title")}
         </NavLink>
         <NavLink
           to="desserts"

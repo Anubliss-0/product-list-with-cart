@@ -48,9 +48,9 @@ function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmatio
                             <>
                                 <li key={item.id}>
                                     <div className={styles.itemLeft}>
-                                        <img src={product?.image.thumbnail} alt="Thumbnail of food" />
+                                        <img src={product?.image.thumbnail} alt={`${t(`${product?.section}.items.${product?.name}`)} ${t('ariaLabels.thumbnail')}`} />
                                         <div>
-                                            <span>{product?.name ?? 'Unknown'}</span>
+                                            <span>{t(`${product?.section}.items.${product?.name}`)}</span>
                                             <div className={styles.itemLeftEnd}>
                                                 <span>{item.quantity}X </span>
                                                 <span>@ €{(product?.price ?? 0).toFixed(2)}</span>
@@ -71,7 +71,7 @@ function ConfirmationModal({ cart, setCart, showConfirmation, setShowConfirmatio
                     </li>
                 </ul>
                 <div className={styles.confirmEnd}>
-                    <button onClick={resetCart}>Start new order</button>
+                    <button onClick={resetCart}>{t("newOrder")}</button>
                 </div>
             </div>
         </div>
