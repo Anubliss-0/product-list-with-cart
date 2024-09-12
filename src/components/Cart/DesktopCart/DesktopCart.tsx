@@ -1,7 +1,6 @@
 import { useTranslation, Trans } from "../../../i18n";
 import { flattenAndMapData } from "../../../utils/flattenAndMapData";
 import styles from "./DesktopCart.module.scss";
-import emptyCartImage from "../../../../public/assets/images/illustration-empty-cart.svg";
 import ConfirmButton from "../ConfirmButton/ConfirmButton";
 import CartItemsList from "../CartItemsList/CartItemsList";
 
@@ -58,7 +57,7 @@ function DesktopCart({ cart, setCart, setShowConfirmation }: CartComponentProps)
                 </>
             ) : (
                 <div className={styles.emptyCart}>
-                    <img src={emptyCartImage} alt="" />
+                    <img src="assets/images/illustration-empty-cart.svg" alt="" />
                     <span>{t(`emptyCart`)}</span>
                 </div>
             )}

@@ -7,7 +7,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: hsla(0, 0, 0, 50%);
+    background-color: hsla(0, 0%, 0%, 0.5);
     top: 0px;
     z-index: 99;
 
@@ -24,7 +24,7 @@
     max-height: 80%;
     padding: $spacing-500;
     border-radius: .75rem;
-    
+
 
 
     @include respond-to-tablet {
