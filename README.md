@@ -57,9 +57,9 @@ This is only my second React project, and while my last project used PropTypes f
 
 In summary, this project introduced me to and helped me implement the following technologies and concepts:
 
-	-	React Router for navigation in a single-page application
-	-	Vite as a fast, modern build tool
-	-	TypeScript as a superior alternative to PropTypes for type safety
+-	React Router for navigation in a single-page application
+-	Vite as a fast, modern build tool
+-	TypeScript as a superior alternative to PropTypes for type safety
 
 ### Continued development
 
